@@ -85,8 +85,9 @@ body {
 
 .shell {
   width: 100%;
-  max-width: var(--measure);
-  margin-inline: auto;
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin-left: auto;
+  margin-right: auto;
   padding-inline: var(--gutter);
 }
 
