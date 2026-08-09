@@ -1,0 +1,70 @@
+---
+/**
+ * Giscus comments — threads live as GitHub Discussions in your own repo.
+ * Free, no tracking, no database, and you own the data.
+ *
+ * SETUP (about ten minutes):
+ *  1. Make the site repo public.
+ *  2. Repo → Settings → General → Features → tick "Discussions".
+ *  3. Install the Giscus app: https://github.com/apps/giscus
+ *  4. Go to https://giscus.app, enter the repo, choose the
+ *     "Announcements" discussion category and "pathname" mapping.
+ *  5. Copy the four values it generates into the constants below.
+ *
+ * Note: commenters need a GitHub account. If you find that readers are
+ * emailing you instead of commenting, swap this file for Hyvor Talk.
+ */
+const REPO       = 'achintyarup-lgtm/fine-print';
+const REPO_ID    = 'PASTE_REPO_ID_FROM_GISCUS_APP';
+const CATEGORY   = 'Announcements';
+const CATEGORY_ID = 'PASTE_CATEGORY_ID_FROM_GISCUS_APP';
+---
+
+<section class="comments" aria-label="Comments">
+  <h2>Responses</h2>
+  <p class="comments__note">
+    Comments run on GitHub Discussions, so you will need a GitHub account to post.
+    If you would rather not, <a href="/contact">write to me directly</a> —
+    corrections and documents especially welcome.
+  </p>
+
+  <script
+    src="https://giscus.app/client.js"
+    data-repo={REPO}
+    data-repo-id={REPO_ID}
+    data-category={CATEGORY}
+    data-category-id={CATEGORY_ID}
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+</section>
+
+<style>
+  .comments {
+    margin-block-start: 5rem;
+    padding-block-start: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+  .comments h2 {
+    border: 0;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--body);
+  }
+  .comments__note {
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    margin-bottom: 2rem;
+  }
+</style>

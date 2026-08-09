@@ -1,0 +1,24 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Comments from '../components/Comments.astro';
+
+const { frontmatter } = Astro.props;
+const { title, standfirst, date, description, ogImage } = frontmatter;
+
+const printed = new Date(date).toLocaleDateString('en-IN', {
+  day: 'numeric', month: 'long', year: 'numeric'
+});
+---
+<BaseLayout title={`${title} — The Fine Print`} description={description ?? standfirst} image={ogImage}>
+  <article class="shell flow">
+    <h1>{title}</h1>
+    {standfirst && <p class="standfirst">{standfirst}</p>}
+    <p class="dateline">Achintyarup Ray · <time datetime={date}>{printed}</time></p>
+
+    <slot />
+  </article>
+
+  <div class="shell">
+    <Comments />
+  </div>
+</BaseLayout>

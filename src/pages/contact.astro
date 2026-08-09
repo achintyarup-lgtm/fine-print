@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+/**
+ * The form posts to Web3Forms, which relays the message to your inbox.
+ * Your address is stored with them, never printed in the page source, so
+ * scrapers cannot harvest it.
+ *
+ * SETUP (two minutes, no account needed):
+ *   1. Go to https://web3forms.com
+ *   2. Enter your email address. They send you an access key.
+ *   3. Paste the key below.
+ *
+ * Free tier: 250 submissions a month, which is far more than this will get.
+ *
+ * Prefer an alternative? Formspree (formspree.io, 50/month free) works the
+ * same way — swap the action URL and the hidden key field.
+ */
+const ACCESS_KEY = 'PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE';
+---
+
+<BaseLayout
+  title="Contact — The Fine Print"
+  description="Write to Achintyarup Ray. Corrections and documents especially welcome."
+>
+  <div class="shell flow">
+    <h1>Write to me</h1>
+
+    <p class="standfirst">
+      Corrections, documents, and arguments all welcome. Especially documents.
+    </p>
+
+    <p>
+      If something here is wrong, tell me and I will fix it in the open, with a
+      note on the piece saying what changed and when. If you are sitting on a
+      file, an order, an inspection report or an RTI reply that ought to be
+      read, this is the place.
+    </p>
+
+    <form id="contact-form" class="cform">
+      <input type="hidden" name="access_key" value={ACCESS_KEY} />
+      <input type="hidden" name="subject" value="The Fine Print — message from the site" />
+      <input type="hidden" name="from_name" value="The Fine Print" />
+
+      {/* Spam trap. Real people never fill this in; bots almost always do. */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        class="cform__trap"
+        tabindex="-1"
+        autocomplete="off"
+      />
+
+      <div class="cform__row">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required autocomplete="name" />
+      </div>
+
+      <div class="cform__row">
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+        <span class="cform__hint">So I can reply. Not shared, not published, not added to a list.</span>
+      </div>
+
+      <div class="cform__row">
+        <label for="about">What is this about?</label>
+        <select id="about" name="about">
+          <option>A correction</option>
+          <option>A document or tip-off</option>
+          <option>A response to something I wrote</option>
+          <option>Translation or editing work</option>
+          <option>Something else</option>
+        </select>
+      </div>
+
+      <div class="cform__row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="8" required></textarea>
+      </div>
+
+      <button type="submit" class="cform__submit">Send message</button>
+
+      <p class="cform__status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="cform__note">
+      Attachments cannot go through this form. If you have a file to send, say so
+      in the message and I will reply with an address to send it to.
+    </p>
+  </div>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const button = form.querySelector('.cform__submit');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.textContent = '';
+    status.className = 'cform__status';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        form.reset();
+        status.textContent = 'Sent. I read everything, and I reply to most things.';
+        status.className = 'cform__status cform__status--ok';
+        button.textContent = 'Send message';
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err) {
+      status.textContent =
+        'That did not go through. Try again in a moment, or reach me through LinkedIn.';
+      status.className = 'cform__status cform__status--bad';
+      button.textContent = 'Send message';
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>
+
+<style>
+  .cform {
+    margin-block-start: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    max-width: 30rem;
+  }
+
+  .cform__row { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .cform label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .cform input[type='text'],
+  .cform input[type='email'],
+  .cform select,
+  .cform textarea {
+    font-family: var(--body);
+    font-size: 1rem;
+    color: var(--ink);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
+    border-radius: 0;
+    transition: border-color 0.15s;
+  }
+  .cform textarea {
+    border: 1px solid var(--rule);
+    padding: 0.75rem;
+    line-height: 1.55;
+    resize: vertical;
+  }
+  .cform input:focus,
+  .cform select:focus,
+  .cform textarea:focus {
+    outline: none;
+    border-color: var(--ochre);
+  }
+
+  .cform__hint {
+    font-size: 0.8125rem;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+
+  /* Honeypot — hidden from people, visible to bots */
+  .cform__trap {
+    position: absolute !important;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .cform__submit {
+    align-self: flex-start;
+    font-family: var(--body);
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .cform__submit:hover:not(:disabled) {
+    background: var(--alta);
+    border-color: var(--alta);
+  }
+  .cform__submit:disabled { opacity: 0.5; cursor: default; }
+
+  .cform__status { margin: 0; font-size: 0.9375rem; }
+  .cform__status--ok { color: var(--indigo); }
+  .cform__status--bad { color: var(--alta); }
+
+  .cform__note {
+    margin-block-start: 2rem;
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    max-width: 30rem;
+  }
+</style>
