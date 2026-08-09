@@ -19,7 +19,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           <time datetime={post.data.date}>
             {new Date(post.data.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
           </time>
-          <h2><a href={`/${post.slug}`}>{post.data.title}</a></h2>
+          <h2><a href={`${import.meta.env.BASE_URL}${post.slug}`}>{post.data.title}</a></h2>
           {post.data.standfirst && <p>{post.data.standfirst}</p>}
         </li>
       ))}
