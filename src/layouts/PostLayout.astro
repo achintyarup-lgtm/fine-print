@@ -7,6 +7,9 @@ const { title, standfirst, date, description, ogImage } = frontmatter;
 const printed = new Date(date).toLocaleDateString('en-IN', {
   day: 'numeric', month: 'long', year: 'numeric'
 });
+
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const enc = encodeURIComponent;
 ---
 <BaseLayout title={`${title} — The Fine Print`} description={description ?? standfirst} image={ogImage}>
   <article class="shell flow">
@@ -18,19 +21,72 @@ const printed = new Date(date).toLocaleDateString('en-IN', {
   </article>
 
   <div class="shell">
+    <div class="share">
+      <span class="share__label">Share</span>
+      <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`} target="_blank" rel="noopener">LinkedIn</a>
+      <a href={`https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`} target="_blank" rel="noopener">Facebook</a>
+      <a href={`https://api.whatsapp.com/send?text=${enc(title + ' — ' + url)}`} target="_blank" rel="noopener">WhatsApp</a>
+      <a href={`https://twitter.com/intent/tweet?text=${enc(title)}&url=${enc(url)}`} target="_blank" rel="noopener">X</a>
+      <button class="share__copy" data-url={url}>Copy link</button>
+    </div>
+
     <p class="response-note">
       Corrections and documents welcome —
       <a href={`${import.meta.env.BASE_URL}contact`}>write to me</a>.
     </p>
   </div>
+</BaseLayout>
+
+<script>
+  const btn = document.querySelector('.share__copy');
+  if (btn) {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.url);
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = original; }, 1800);
+      } catch {
+        btn.textContent = 'Press Ctrl+C';
+      }
+    });
+  }
+</script>
 
 <style>
-  .response-note {
+  .share {
     margin-block-start: 4rem;
-    padding-block-start: 1.5rem;
+    padding-block: 1.25rem;
     border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+  }
+  .share__label {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .share a, .share__copy {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    background: none;
+    border-left: 0; border-right: 0; border-top: 0;
+    font-family: var(--body);
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  .share a:hover, .share__copy:hover { border-bottom-color: var(--ochre); }
+
+  .response-note {
+    margin-block-start: 2.5rem;
     font-size: 0.9375rem;
     color: var(--ink-soft);
   }
 </style>
-</BaseLayout>
