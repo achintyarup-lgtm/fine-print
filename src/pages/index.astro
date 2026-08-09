@@ -11,9 +11,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 <BaseLayout>
   <div class="shell">
     <p class="lede">
-      What was sanctioned, what was built, and what got left out of the
-      record — files, judgments, RTI replies, and the documents nobody got
-      round to publishing.
+      Longer pieces on policy, environment, history and literature — the
+      arguments that need more room than a column allows, and the numbers
+      that go with them.
     </p>
 
     <div class="ornament" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -23,16 +23,16 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         const cover = post.data.cover ? covers[`../assets/${post.data.cover}`]?.default : null;
         return (
           <li>
-            {cover && (
-              <a href={`${import.meta.env.BASE_URL}${post.slug}`} class="postlist__cover">
-                <Image src={cover} alt="" widths={[400, 800, 1200]} loading="lazy" />
-              </a>
-            )}
             <time datetime={post.data.date}>
               {new Date(post.data.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
             </time>
             <h2><a href={`${import.meta.env.BASE_URL}${post.slug}`}>{post.data.title}</a></h2>
             {post.data.standfirst && <p>{post.data.standfirst}</p>}
+            {cover && (
+              <a href={`${import.meta.env.BASE_URL}${post.slug}`} class="postlist__cover">
+                <Image src={cover} alt="" widths={[400, 800, 1200]} loading="lazy" />
+              </a>
+            )}
           </li>
         );
       })}
@@ -83,7 +83,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   }
   .postlist li + li { padding-block-start: 3.5rem; }
 
-  /* hairline between entries, with a lozenge sitting on it */
   .postlist li + li::before {
     content: '';
     position: absolute;
@@ -103,23 +102,6 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     transform: rotate(45deg);
     background: var(--paper);
     border: 1px solid var(--rule);
-  }
-
-  .postlist__cover {
-    display: block;
-    margin-bottom: 1.75rem;
-    overflow: hidden;
-  }
-  .postlist__cover img {
-    display: block;
-    width: 100%;
-    height: auto;
-    filter: saturate(0.92);
-    transition: filter 0.5s ease, transform 0.5s ease;
-  }
-  .postlist__cover:hover img {
-    filter: saturate(1.05);
-    transform: scale(1.012);
   }
 
   .postlist time {
@@ -149,6 +131,23 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     color: var(--ink-soft);
     max-width: 32rem;
     margin: 0;
+  }
+
+  .postlist__cover {
+    display: block;
+    margin-top: 1.75rem;
+    overflow: hidden;
+  }
+  .postlist__cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: saturate(0.92);
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+  .postlist__cover:hover img {
+    filter: saturate(1.05);
+    transform: scale(1.012);
   }
 
   @media (prefers-reduced-motion: reduce) {
