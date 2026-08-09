@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 // also set `base: '/fine-print'` below.
 export default defineConfig({
   site: 'https://fineprint.achintyarupray.com',
-  base: '/fine-print/',
+  // base: '/fine-print/',
   integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: { theme: 'github-light' }
