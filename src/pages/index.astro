@@ -16,6 +16,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       round to publishing.
     </p>
 
+    <div class="ornament" aria-hidden="true"><span></span><span></span><span></span></div>
+
     <ul class="postlist">
       {posts.map((post) => {
         const cover = post.data.cover ? covers[`../assets/${post.data.cover}`]?.default : null;
@@ -40,18 +42,117 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
 <style>
   .lede {
-    font-size: 1.125rem;
+    font-size: 1.1875rem;
+    line-height: 1.55;
     color: var(--ink-soft);
-    max-width: 30rem;
-    margin: 0 0 3rem;
+    max-width: 32rem;
+    margin: 0;
   }
+  .lede::first-letter {
+    font-family: var(--display);
+    font-size: 3.4em;
+    line-height: 0.8;
+    float: left;
+    margin: 0.05em 0.12em 0 0;
+    color: var(--ochre);
+  }
+
+  .ornament {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-block: 3.5rem;
+  }
+  .ornament span {
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    background: var(--ochre);
+  }
+  .ornament span:nth-child(2) {
+    background: var(--ink);
+    opacity: 0.55;
+  }
+
+  .postlist { list-style: none; margin: 0; padding: 0; }
+
+  .postlist li {
+    padding-block: 0 3.5rem;
+    border: 0;
+    position: relative;
+  }
+  .postlist li + li { padding-block-start: 3.5rem; }
+
+  /* hairline between entries, with a lozenge sitting on it */
+  .postlist li + li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .postlist li + li::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    margin-left: -3.5px;
+    transform: rotate(45deg);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+  }
+
   .postlist__cover {
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
+    overflow: hidden;
   }
   .postlist__cover img {
     display: block;
     width: 100%;
     height: auto;
+    filter: saturate(0.92);
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+  .postlist__cover:hover img {
+    filter: saturate(1.05);
+    transform: scale(1.012);
+  }
+
+  .postlist time {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    margin-bottom: 0.6rem;
+  }
+
+  .postlist h2 {
+    border: 0;
+    padding: 0;
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.5rem, 1.25rem + 1.1vw, 1.875rem);
+    line-height: 1.15;
+  }
+  .postlist h2 a { text-decoration: none; }
+  .postlist h2 a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--ochre);
+    text-underline-offset: 4px;
+  }
+
+  .postlist p {
+    color: var(--ink-soft);
+    max-width: 32rem;
+    margin: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .postlist__cover img { transition: none; }
+    .postlist__cover:hover img { transform: none; }
   }
 </style>
