@@ -24,7 +24,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:image" content={new URL(image, Astro.site)} />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="alternate" type="application/rss+xml" title="The Fine Print" href="/rss.xml" />
+  <link rel="alternate" type="application/rss+xml" title="The Fine Print" href={`${import.meta.env.BASE_URL}rss.xml`} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,14 +39,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <header class="masthead">
     <div class="masthead__inner">
       <div class="masthead__brand">
-        <p class="masthead__title"><a href="/">The Fine Print</a></p>
+        <p class="masthead__title"><a href={import.meta.env.BASE_URL}>The Fine Print</a></p>
         <p class="masthead__byline">Achintyarup Ray · Kolkata</p>
       </div>
       <nav class="masthead__nav" aria-label="Main">
-        <a href="/">Articles</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/rss.xml">RSS</a>
+        <a href={import.meta.env.BASE_URL}>Articles</a>
+        <a href={`${import.meta.env.BASE_URL}about`}>About</a>
+        <a href={`${import.meta.env.BASE_URL}contact`}>Contact</a>
+        <a href={`${import.meta.env.BASE_URL}rss.xml`}>RSS</a>
       </nav>
     </div>
   </header>
@@ -58,7 +58,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <footer class="footer">
     <div class="footer__inner">
       <span>The Fine Print — written and reported by Achintyarup Ray, Kolkata.</span>
-      <span><a href="/contact">Write to me</a></span>
+      <span><a href={`${import.meta.env.BASE_URL}contact`}>Write to me</a></span>
     </div>
   </footer>
 </body>
