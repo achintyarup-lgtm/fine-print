@@ -7,56 +7,44 @@ draft: false
 ---
 
 import Infographic from '../../components/Infographic.astro';
-
-{/*
-  IMAGES — drop your Kalighat artwork into src/assets/ and uncomment the
-  imports below. Keep the paintings WORDLESS; the numbers are supplied as
-  real text through the `labels` prop, so they stay sharp on a phone and
-  can be swapped for Bengali later.
-
-  import patPlates from '../../assets/millet-01-two-plates.png';
-  import patTrain  from '../../assets/millet-02-train.png';
-  import patMoney  from '../../assets/millet-03-money.png';
-  import patField  from '../../assets/millet-04-field.png';
-  import patGodown from '../../assets/millet-05-godown.png';
-  import patRagi   from '../../assets/millet-06-ragi.png';
-*/}
+import pat01 from '../../assets/001.png';
+import pat02 from '../../assets/002.png';
+import pat03 from '../../assets/003.png';
+import pat04 from '../../assets/004.png';
+import pat05 from '../../assets/005.png';
+import pat06 from '../../assets/006.png';
 
 Start with three numbers.
 
 **One.** Your grandparents ate nearly eight times more millet than you do. In 1962 the average Indian ate 32.9 kg of millets a year. By 2010 it was 4.2 kg. Over the same period wheat consumption almost doubled, from 27 kg to 52 kg.
 
-{/*
 <Infographic
-  src={patPlates}
+  src={pat01}
   width="wide"
-  alt="Two brass thalis seen from above. On the 1962 plate a large heap of ragi and bajra sits beside a smaller pile of wheat. On the 2010 plate the wheat has grown enormous and the millet is a countable scatter of grains on bare brass."
-  caption="What one Indian ate in a year."
+  alt="A Kalighat-style painting of the same seated woman twice. In 1962 her plate holds a large heap of millet beside a smaller pile of wheat. In 2010 the wheat has grown enormous and only a few grains of millet remain on the bare plate."
+  caption="Millet consumption fell by 87 per cent in fifty years. Wheat almost doubled."
   source="Basavaraj et al. / IndiaSpend, cited in Frontiers in Sustainable Food Systems, 2021."
-  labels={[
-    { text: '1962', sub: 'millets 32.9 kg · wheat 27 kg', x: 12, y: 88, tone: 'ochre' },
-    { text: '2010', sub: 'millets 4.2 kg · wheat 52 kg', x: 62, y: 88, tone: 'indigo' },
-  ]}
 />
-*/}
 
 **Two.** Picture a goods train. In 2022-23 the government bought 18.21 million tonnes of paddy from Punjab. From the same state, in the same year, it bought somewhere between nothing and 140 tonnes of bajra and jowar. The paddy would fill more than seven thousand goods wagons. The millet would not fill one.
 
-{/*
 <Infographic
-  src={patTrain}
-  width="bleed"
-  alt="A freight train of covered grain wagons runs the full width of the frame and out of both edges into heat haze. In the foreground, sharply in focus and hugely out of scale, a hand holds a single grain of bajra in steel tweezers."
-  caption="What the state actually buys. Punjab, 2022-23."
+  src={pat02}
+  width="wide"
+  alt="A Kalighat-style painting of a stout Calcutta babu cradling an enormous sack of paddy in one arm while holding a single grain of millet up between finger and thumb, admiring it."
+  caption="Both crops carry a support price. Only one has a buyer. Punjab, 2022-23."
   source="Union Ministry of Consumer Affairs, Food and Public Distribution, as reported in The Wire, February 2026."
-  labels={[
-    { text: 'PADDY — 18,210,000 tonnes', sub: 'roughly 7,300 wagon-loads', x: 6, y: 12, tone: 'indigo' },
-    { text: 'BAJRA AND JOWAR — 140 tonnes', sub: 'not enough to fill one wagon', x: 94, y: 66, tone: 'ochre', align: 'right' },
-  ]}
 />
-*/}
 
 **Three.** Over the last decade the government paid paddy farmers ₹16.08 lakh crore in support prices. Its flagship scheme to promote millet-based food products is worth ₹800 crore, spread across five years. That is roughly one rupee for millets for every two thousand rupees for rice.
+
+<Infographic
+  src={pat03}
+  width="wide"
+  alt="A Kalighat-style painting of a merchant pouring a stream of coins into an enormous sack with one hand while holding a single coin over a tiny bowl with the other. He is looking at the sack."
+  caption="Both are described as support for farmers."
+  source="PIB and the Cabinet Committee on Economic Affairs, Kharif MSP release, May 2026; Ministry of Food Processing Industries."
+/>
 
 Now hold those three numbers next to the last three years of speeches — the International Year of Millets, *Shree Anna*, millets on the G20 dinner menu, the Prime Minister calling ragi a superfood.
 
@@ -69,6 +57,14 @@ Until about sixty years ago millets were ordinary food across much of India. Rag
 Then came the near-famines of the 1960s and the Green Revolution. India decided, deliberately, to grow its way out of hunger using two crops. New seeds, canal water, cheap fertiliser, subsidised power for tubewells — all of it went to rice and wheat.
 
 It worked. India stopped importing food. But millets were pushed off the land. Over five decades India lost about 56 per cent of the area under millet cultivation, and the area under sorghum alone fell by more than 85 per cent.
+
+<Infographic
+  src={pat04}
+  width="wide"
+  alt="A Kalighat-style painting of the same woman winnowing twice. In 1970 her winnowing fan is heaped with millet. Today it holds a thin scatter, and paddy grains lie around her feet."
+  caption="The soil did not change. The policy did."
+  source="Observer Research Foundation, cited in Mongabay India, March 2025."
+/>
 
 Farmers did not change their minds. A system changed them.
 
@@ -88,7 +84,15 @@ Branding and processing, not purchase.
 
 The exports show it. India shipped about 1,46,300 tonnes of millets worth $70.89 million in 2023-24. In the year straight after the millet year, that fell to 89,165 tonnes worth $37 million, before partly recovering to 1,38,690 tonnes worth ₹543 crore in 2025-26. On national production of about 18.6 million tonnes, exports remain under one per cent. This was never a trade story.
 
-And in the food system as a whole millets stayed marginal: of India's 332 million tonnes of cereals in 2024-25, rice was 150 million tonnes, wheat 118 million, and all millets together 18.6 million.
+And in the food system as a whole millets stayed marginal.
+
+<Infographic
+  src={pat05}
+  width="wide"
+  alt="A Kalighat-style painting of a grain seller with four brass measures of wildly unequal size, from a rice measure cropped by the top of the frame down to a millet measure barely reaching his knee."
+  caption="India's cereal harvest, 2024-25. Total 332 million tonnes: rice 150.18 MT, wheat 117.95 MT, maize 43.41 MT, all millets 18.6 MT."
+  source="Department of Agriculture and Farmers' Welfare, via APEDA."
+/>
 
 ## The real reason
 
@@ -117,6 +121,14 @@ The second: parts of it are working. In 2024-25 Odisha procured 75,000 tonnes of
 ## What works, where it has been tried
 
 The Odisha Millets Mission began in 2017 in 30 blocks across 7 districts and had reached 143 blocks across 19 districts by 2022. It bought 6.39 lakh quintals of ragi between 2018-19 and 2021-22 and transferred ₹209.94 crore straight to farmers, while setting up over a thousand threshing and processing units and 169 community seed centres. The ragi goes into ration shops, anganwadis and school meals — guaranteed demand at the far end.
+
+<Infographic
+  src={pat06}
+  width="wide"
+  alt="A Kalighat-style painting of a woman holding a full ragi plant upright in both hands, with a ration measure, an anganwadi bowl and a school meal plate at her feet."
+  caption="Guaranteed purchase at one end. Guaranteed demand at the other."
+  source="Government of Odisha; TDCC Odisha; Food Corporation of India, August 2025."
+/>
 
 Buy the grain reliably. Put it into welfare schemes. Fund seed banks and village dehulling machines, because a grain nobody can process is a grain nobody will grow. It costs money, and nobody makes a speech about a dehulling machine.
 
