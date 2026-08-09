@@ -1,6 +1,5 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Comments from '../components/Comments.astro';
 
 const { frontmatter } = Astro.props;
 const { title, standfirst, date, description, ogImage } = frontmatter;
@@ -19,6 +18,19 @@ const printed = new Date(date).toLocaleDateString('en-IN', {
   </article>
 
   <div class="shell">
-    <Comments />
+    <p class="response-note">
+      Corrections and documents welcome —
+      <a href={`${import.meta.env.BASE_URL}contact`}>write to me</a>.
+    </p>
   </div>
+
+<style>
+  .response-note {
+    margin-block-start: 4rem;
+    padding-block-start: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+  }
+</style>
 </BaseLayout>
