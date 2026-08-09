@@ -3,11 +3,12 @@ import '../styles/global.css';
 
 const {
   title = 'The Fine Print',
-  description = 'What was sanctioned, what was built, and what got left out of the record. Reporting and essays by Achintyarup Ray.',
-  image = '/images/og-default.png',
+  description = 'Longer pieces on policy, environment, history and literature, by Achintyarup Ray.',
+  image = 'og/millet.png',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(image, Astro.site);
 ---
 <!doctype html>
 <html lang="en">
@@ -18,11 +19,19 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
 
+  <meta property="og:site_name" content="The Fine Print" />
   <meta property="og:type" content="article" />
+  <meta property="og:url" content={canonical} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={new URL(image, Astro.site)} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
 
   <link rel="alternate" type="application/rss+xml" title="The Fine Print" href={`${import.meta.env.BASE_URL}rss.xml`} />
 
