@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Subscribe from '../components/Subscribe.astro';
 
 const { frontmatter } = Astro.props;
 const { title, standfirst, date, description, ogImage } = frontmatter;
@@ -19,6 +20,8 @@ const enc = encodeURIComponent;
 
     <slot />
   </article>
+
+<Subscribe variant="foot" />
 
   <div class="shell">
     <div class="share">
