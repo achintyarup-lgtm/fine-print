@@ -1,0 +1,184 @@
+---
+interface Props {
+  variant?: 'inline' | 'foot';
+  heading?: string;
+  blurb?: string;
+}
+
+const {
+  variant = 'inline',
+  heading = 'Get The Fine Print by email',
+  blurb = 'Long-form reporting on policy, environment, history and literature. One letter when there is something worth sending.',
+} = Astro.props;
+
+const USERNAME = 'achintyarup';
+const ACTION = `https://buttondown.com/api/emails/embed-subscribe/${USERNAME}`;
+const POPUP = `https://buttondown.com/${USERNAME}`;
+const fieldId = `bd-email-${variant}`;
+---
+
+<aside class={`subscribe subscribe--${variant}`}>
+  <svg class="lozenge" viewBox="0 0 40 12" aria-hidden="true" focusable="false">
+    <path d="M20 0 L40 6 L20 12 L0 6 Z" fill="#B8873F" />
+  </svg>
+
+  <h2 class="subscribe__heading">{heading}</h2>
+  <p class="subscribe__blurb">{blurb}</p>
+
+  <form
+    action={ACTION}
+    method="post"
+    target="popupwindow"
+    onsubmit={`window.open('${POPUP}', 'popupwindow')`}
+    class="subscribe__form"
+  >
+    <label class="subscribe__label" for={fieldId}>Email address</label>
+    <input
+      id={fieldId}
+      class="subscribe__input"
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      autocomplete="email"
+      required
+    />
+    <input type="hidden" name="embed" value="1" />
+    <input type="hidden" name="tag" value={`site-${variant}`} />
+    <button class="subscribe__button" type="submit">Subscribe</button>
+  </form>
+
+  <p class="subscribe__fineprint">
+    Free. Unsubscribe whenever you like. Delivered by
+    <a href="https://buttondown.com" rel="noopener">Buttondown</a>.
+  </p>
+</aside>
+
+<style>
+  .subscribe {
+    --cream: #F4EFE4;
+    --lamp: #1A1815;
+    --ochre: #B8873F;
+    --alta: #A63A2B;
+
+    margin: 3.25rem auto;
+    padding: 1.9rem 1.75rem 1.5rem;
+    max-width: 34rem;
+    background: color-mix(in srgb, var(--ochre) 8%, var(--cream));
+    border: 1px solid color-mix(in srgb, var(--lamp) 18%, transparent);
+    border-top: 3px solid var(--ochre);
+    text-align: center;
+  }
+
+  .subscribe--foot {
+    margin-top: 4rem;
+    max-width: 38rem;
+  }
+
+  .lozenge {
+    display: block;
+    width: 40px;
+    height: 12px;
+    margin: 0 auto 1rem;
+    opacity: 0.85;
+  }
+
+  .subscribe__heading {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--lamp);
+    margin: 0 0 0.6rem;
+  }
+
+  .subscribe__blurb {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    color: color-mix(in srgb, var(--lamp) 78%, transparent);
+    margin: 0 auto 1.4rem;
+    max-width: 30rem;
+  }
+
+  .subscribe__form {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .subscribe__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .subscribe__input {
+    flex: 1 1 17rem;
+    min-width: 0;
+    padding: 0.68rem 0.85rem;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1rem;
+    color: var(--lamp);
+    background: var(--cream);
+    border: 1px solid color-mix(in srgb, var(--lamp) 35%, transparent);
+    border-radius: 0;
+  }
+
+  .subscribe__input::placeholder {
+    color: color-mix(in srgb, var(--lamp) 45%, transparent);
+  }
+
+  .subscribe__input:focus {
+    outline: none;
+    border-color: var(--ochre);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--ochre) 30%, transparent);
+  }
+
+  .subscribe__button {
+    flex: 0 0 auto;
+    padding: 0.68rem 1.4rem;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    color: var(--cream);
+    background: var(--lamp);
+    border: 1px solid var(--lamp);
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.18s ease, border-color 0.18s ease;
+  }
+
+  .subscribe__button:hover,
+  .subscribe__button:focus-visible {
+    background: var(--alta);
+    border-color: var(--alta);
+  }
+
+  .subscribe__fineprint {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 0.85rem;
+    color: color-mix(in srgb, var(--lamp) 55%, transparent);
+    margin: 1rem 0 0;
+  }
+
+  .subscribe__fineprint a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  @media (max-width: 480px) {
+    .subscribe {
+      padding: 1.5rem 1.15rem 1.25rem;
+    }
+    .subscribe__input,
+    .subscribe__button {
+      flex: 1 1 100%;
+    }
+  }
+</style>
