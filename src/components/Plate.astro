@@ -88,7 +88,7 @@ const widthClass = width === 'bleed' ? 'bleed' : width === 'wide' ? 'wide' : '';
   .plate__inner :global(table) {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .plate__inner :global(th) {
     font-family: 'Kalam', cursive;
@@ -106,6 +106,7 @@ const widthClass = width === 'bleed' ? 'bleed' : width === 'wide' ? 'wide' : '';
     border-bottom: 1px solid var(--rule);
     vertical-align: top;
 text-align: left;
+font-weight: 600;
   }
   .plate__inner :global(tr:last-child td) { border-bottom: 0; }
   .plate__inner :global(.hi) { color: var(--alta); font-weight: 600; }
@@ -114,8 +115,9 @@ text-align: left;
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 0.85rem;
-  }
+    font-size: 0.95rem;
+    font-weight: 600;
+}
   .plate__inner :global(ol.plate__steps li) {
     padding: 0 0 0.7rem 0;
     display: grid;
@@ -133,7 +135,8 @@ text-align: left;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
-    font-size: 0.8125rem;
+    font-size: 0.95rem;
+    font-weight: 600;
     line-height: 1.6;
   }
   .plate__cols :global(p) { margin: 0; }
