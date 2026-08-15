@@ -68,11 +68,13 @@ const widthClass = width === 'bleed' ? 'bleed' : width === 'wide' ? 'wide' : '';
   }
 
   .plate__inner :global(h3) {
-    font-size: 1.05rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin: 0 0 0.15rem;
-    color: var(--ink);
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    margin: 0 0 0.2rem;
+    color: var(--alta);
   }
 
   .plate__inner :global(.plate__sub) {
@@ -89,12 +91,13 @@ const widthClass = width === 'bleed' ? 'bleed' : width === 'wide' ? 'wide' : '';
     font-size: 0.875rem;
   }
   .plate__inner :global(th) {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
     text-align: left;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    color: var(--ochre);
     padding: 0 0.6rem 0.4rem 0;
     border-bottom: 1px solid var(--rule);
   }
@@ -102,6 +105,7 @@ const widthClass = width === 'bleed' ? 'bleed' : width === 'wide' ? 'wide' : '';
     padding: 0.45rem 0.6rem 0.45rem 0;
     border-bottom: 1px solid var(--rule);
     vertical-align: top;
+text-align: left;
   }
   .plate__inner :global(tr:last-child td) { border-bottom: 0; }
   .plate__inner :global(.hi) { color: var(--alta); font-weight: 600; }
