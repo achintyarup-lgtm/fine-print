@@ -1,0 +1,162 @@
+---
+/**
+ * Plate
+ *
+ * For painted frames and borders that enclose an empty field.
+ * The artwork is a background; the content is real HTML flowing
+ * inside the clear area, so tables, lists and long timelines
+ * reflow properly and stay selectable and searchable.
+ *
+ * inset = how far in from the edge the clear field starts,
+ * as a percentage. Different artwork needs different values.
+ *
+ * Usage:
+ * <Plate src={jgm01} inset="14% 12%" caption="..." >
+ *   ...markdown or HTML...
+ * </Plate>
+ */
+import { getImage } from 'astro:assets';
+
+const {
+  src,
+  alt = '',
+  inset = '12%',
+  caption,
+  source,
+  align = 'start',
+  width = 'wide',
+} = Astro.props;
+
+const bg = await getImage({ src, width: 1600, quality: 90 });
+const widthClass = width === 'bleed' ? 'bleed' : width === 'wide' ? 'wide' : '';
+---
+
+<figure class={`plate ${widthClass}`} role="group" aria-label={alt}>
+  <div
+    class="plate__field"
+    style={`background-image:url(${bg.src}); padding:${inset}; justify-content:${align};`}
+  >
+    <div class="plate__inner">
+      <slot />
+    </div>
+  </div>
+
+  {(caption || source) && (
+    <figcaption>
+      {caption && <span class="plate__caption">{caption}</span>}
+      {source && <span class="plate__source">Source: {source}</span>}
+    </figcaption>
+  )}
+</figure>
+
+<style>
+  .plate { margin-block: 3.5rem; }
+
+  .plate__field {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 12rem;
+  }
+
+  .plate__inner {
+    width: 100%;
+    font-family: var(--body);
+    line-height: 1.5;
+  }
+
+  .plate__inner :global(h3) {
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 0.15rem;
+    color: var(--ink);
+  }
+
+  .plate__inner :global(.plate__sub) {
+    display: block;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-bottom: 1.1rem;
+  }
+
+  .plate__inner :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .plate__inner :global(th) {
+    text-align: left;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    padding: 0 0.6rem 0.4rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .plate__inner :global(td) {
+    padding: 0.45rem 0.6rem 0.45rem 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .plate__inner :global(tr:last-child td) { border-bottom: 0; }
+  .plate__inner :global(.hi) { color: var(--alta); font-weight: 600; }
+
+  .plate__inner :global(ol.plate__steps) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+  }
+  .plate__inner :global(ol.plate__steps li) {
+    padding: 0 0 0.7rem 0;
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 0.75rem;
+  }
+  .plate__inner :global(ol.plate__steps b) {
+    color: var(--ochre);
+    font-variant-numeric: tabular-nums lining-nums;
+    font-weight: 600;
+  }
+  .plate__inner :global(ol.plate__steps li.last b) { color: var(--alta); }
+
+  .plate__cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+  .plate__cols :global(p) { margin: 0; }
+
+  figcaption {
+    margin-top: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    color: var(--ink-soft);
+  }
+  .plate__caption { font-style: italic; }
+  .plate__source { font-size: 0.75rem; letter-spacing: 0.02em; }
+
+  @media (max-width: 700px) {
+    .plate__field {
+      background-image: none !important;
+      padding: 1.25rem 0 !important;
+      border-top: 2px solid var(--ochre);
+      border-bottom: 2px solid var(--ochre);
+    }
+    .plate__cols { grid-template-columns: 1fr; gap: 1.5rem; }
+    .plate__inner :global(ol.plate__steps li) {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+  }
+</style>
