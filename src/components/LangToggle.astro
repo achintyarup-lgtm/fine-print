@@ -1,0 +1,63 @@
+---
+/**
+ * LangToggle
+ *
+ * Sits at the top of a bilingual pair. Each version links to the other.
+ * `to` is the slug of the other version; `lang` is the language of THIS page.
+ */
+const { to, lang = 'en' } = Astro.props;
+const label = lang === 'en' ? 'বাংলায় পড়ুন' : 'Read in English';
+const other  = lang === 'en' ? 'বাংলা' : 'English';
+---
+
+<div class={`langtoggle langtoggle--${lang}`}>
+  <span class="langtoggle__now">{lang === 'en' ? 'English' : 'বাংলা'}</span>
+  <a class="langtoggle__link" href={`/${to}/`} hreflang={lang === 'en' ? 'bn' : 'en'}>
+    {label}
+    <span class="langtoggle__arrow" aria-hidden="true">→</span>
+  </a>
+</div>
+
+<style>
+  .langtoggle {
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    margin: 0 0 2.5rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+  }
+
+  .langtoggle__now {
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+
+  .langtoggle__link {
+    color: var(--alta);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  .langtoggle__link:hover { border-bottom-color: var(--alta); }
+
+  .langtoggle__arrow {
+    margin-left: 0.3rem;
+    font-size: 0.9em;
+  }
+
+  /* Bengali page: the live label is Bengali, so give it the Bengali face */
+  .langtoggle--bn .langtoggle__now {
+    font-family: 'Noto Serif Bengali', serif;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .langtoggle--en .langtoggle__link {
+    font-family: 'Noto Serif Bengali', serif;
+    letter-spacing: 0;
+  }
+</style>
