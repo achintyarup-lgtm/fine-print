@@ -27,7 +27,9 @@ const schema = {
     name: 'The Fine Print',
     url: 'https://fineprint.achintyarupray.com',
   },
-  ...(datePublished ? { datePublished } : {}),
+    ...(datePublished
+    ? { datePublished: /^\d{4}-\d{2}-\d{2}$/.test(datePublished) ? `${datePublished}T09:00:00+05:30` : datePublished }
+    : {}),
 };
 ---
 <!doctype html>
