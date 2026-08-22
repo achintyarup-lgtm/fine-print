@@ -2,6 +2,8 @@
 import BaseLayout from './BaseLayout.astro';
 import Subscribe from '../components/Subscribe.astro';
 
+const { frontmatter } = Astro.props;
+
 const { title, seoTitle, standfirst, date, description, ogImage } = frontmatter;
 
 const printed = new Date(date).toLocaleDateString('en-IN', {
