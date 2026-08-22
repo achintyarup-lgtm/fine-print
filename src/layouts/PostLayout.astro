@@ -2,8 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Subscribe from '../components/Subscribe.astro';
 
-const { frontmatter } = Astro.props;
-const { title, standfirst, date, description, ogImage } = frontmatter;
+const { title, seoTitle, standfirst, date, description, ogImage } = frontmatter;
 
 const printed = new Date(date).toLocaleDateString('en-IN', {
   day: 'numeric', month: 'long', year: 'numeric'
@@ -12,7 +11,7 @@ const printed = new Date(date).toLocaleDateString('en-IN', {
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const enc = encodeURIComponent;
 ---
-<BaseLayout title={`${title} — The Fine Print`} description={description ?? standfirst} image={ogImage}>
+<BaseLayout title={`${seoTitle ?? title} — The Fine Print`} description={description ?? standfirst} image={ogImage}>
   <article class="shell flow">
     <h1>{title}</h1>
     {standfirst && <p class="standfirst">{standfirst}</p>}
