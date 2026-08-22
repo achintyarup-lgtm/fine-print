@@ -13,7 +13,7 @@ const printed = new Date(date).toLocaleDateString('en-IN', {
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const enc = encodeURIComponent;
 ---
-<BaseLayout title={`${seoTitle ?? title} — The Fine Print`} description={description ?? standfirst} image={ogImage}>
+<BaseLayout title={`${seoTitle ?? title} — The Fine Print`} description={description ?? standfirst} image={ogImage} datePublished={date}>
   <article class="shell flow">
     <h1>{title}</h1>
     {standfirst && <p class="standfirst">{standfirst}</p>}
