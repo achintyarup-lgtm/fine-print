@@ -35,7 +35,7 @@
   --rule:       rgba(26, 24, 21, 0.18);
 
   /* Type */
-  --display: 'Redaction 35', 'Redaction', 'Newsreader', Georgia, serif;
+    --display: 'EB Garamond', 'Newsreader', Georgia, serif;
   --body:    'Newsreader', Georgia, 'Times New Roman', serif;
   --meta:    'Newsreader', Georgia, serif;
 
