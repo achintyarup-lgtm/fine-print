@@ -3,7 +3,7 @@ title: "Mrs Mukherji, the Nazi from Calcutta"
 standfirst: "In March 1949 an Indian officer watched a Calcutta editor’s wife give the Nazi salute in a Düsseldorf court, and recorded, at second hand, a remark she was said to have made about Hitler. The file Delhi marked for destruction shows what the Government of India did next, and what her husband did not."
 description: "In March 1949 an Indian officer watched a Calcutta editor’s wife give the Nazi salute in a Düsseldorf court, and recorded, at second hand, a remark she was said to have made about Hitler. The file Delhi marked for destruction shows what the Government of India did next, and what her husband did not."
 date: "2026-09-28"
-ogImage: og/mrs-mukherji-og.jpg
+ogImage: og/mrs-mukherji-og-2.jpg
 draft: false
 ---
 
