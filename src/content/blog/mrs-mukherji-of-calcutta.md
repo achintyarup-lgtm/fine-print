@@ -173,4 +173,29 @@ None of this makes her a founder of anything. Her Calcutta project failed, and t
 
 ---
 
-*Documents: National Archives of India, MEA File No. 12(23)-Eur.II/49 (Secret), 1949 — Major T. P. Francis, notes on the proceedings of 14 March 1949, dated 22 March 1949; Land Public Safety Department, North Rhine/Westphalia, report of 28 February 1949 (copy); MHA and MEA notes and telegrams, April–November 1949; letters of G. V. Ketkar, 15 April, 2 June and 3 September 1949; E. L. Watkins, Zonal Executive Offices, Lübbecke, 25 August 1949 (copy); A. K. Mukerji to D.C., Special Branch, Calcutta, 29 October 1949 (copy); Government of West Bengal, Home (Passport) Department, 11 November 1949. Published account quoted: Maria Margaronis, “Savitri Devi: The mystical fascist being resurrected by the alt-right,” BBC News Magazine, 28 October 2017. Sumanta Banerjee, interviewed in “Savitri Devi: From the Aryans to the Alt-right,” BBC Radio 4, 2017. Also NAI File No. 210(16)-G/44 (Secret), External Affairs Department, 1944, for the 1940 Bengal Special Branch note and the 1944 Intelligence Bureau notes. Also “Potentially hostile foreigners” / “Indians under suspicion”, printed list, Most Secret, c. 1939 (stamp No. 524/6/M.I.7). Context: Marzia Casolari, “Hindutva’s Foreign Tie-up in the 1930s: Archival Evidence,” *Economic and Political Weekly*, 22 January 2000; Koushiki Dasgupta, *Vidyasagar University Journal of History*, vol. VII, 2018–19; Simran Thapliyal, *Prospect*, 28 January 2025. Quotations are from the documents as typed. Illustrations marked AI-generated are imaginative reconstructions, not records; documents and photographs are reproduced as found.*
+**Documents**
+
+National Archives of India, MEA File No. 12(23)-Eur.II/49 (Secret), 1949:
+
+- Major T. P. Francis, notes on the proceedings of 14 March 1949, dated 22 March 1949
+- Land Public Safety Department, North Rhine/Westphalia, report of 28 February 1949 (copy)
+- MHA and MEA notes and telegrams, April–November 1949
+- Letters of G. V. Ketkar, 15 April, 2 June and 3 September 1949
+- E. L. Watkins, Zonal Executive Offices, Lübbecke, 25 August 1949 (copy)
+- A. K. Mukerji to D.C., Special Branch, Calcutta, 29 October 1949 (copy)
+- Government of West Bengal, Home (Passport) Department, 11 November 1949
+
+Other records:
+
+- NAI File No. 210(16)-G/44 (Secret), External Affairs Department, 1944: the 1940 Bengal Special Branch note and the 1944 Intelligence Bureau notes
+- “Potentially hostile foreigners” / “Indians under suspicion”, printed list, Most Secret, c. 1939 (stamp No. 524/6/M.I.7)
+
+Published accounts and context:
+
+- Maria Margaronis, “Savitri Devi: The mystical fascist being resurrected by the alt-right,” BBC News Magazine, 28 October 2017
+- Sumanta Banerjee, interviewed in “Savitri Devi: From the Aryans to the Alt-right,” BBC Radio 4, 2017
+- Marzia Casolari, “Hindutva’s Foreign Tie-up in the 1930s: Archival Evidence,” *Economic and Political Weekly*, 22 January 2000
+- Koushiki Dasgupta, *Vidyasagar University Journal of History*, vol. VII, 2018–19
+- Simran Thapliyal, *Prospect*, 28 January 2025
+
+*Quotations are from the documents as typed. Illustrations marked AI-generated are imaginative reconstructions, not records; documents and photographs are reproduced as found.*
