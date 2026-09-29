@@ -39,6 +39,9 @@ Ten years after the Mission published her pamphlet, she stood in a courtroom in 
 
 In the gallery sat Major T. P. Francis, consular officer of the Indian Military Mission in Berlin. He had been sent to watch because the defendant, on paper, was an Indian. She was Mrs Savitri Devi Mukherji, wife of Asit Krishna Mukherji of 1 Wellesley Street, Calcutta. Eight days later he typed up what he had seen.
 
+![Handwritten inscription: “To Commander Rockwell, With a joyous ‘Heil Hitler’! from Savitri Devi Mukherji, Yuletide 1961”](/images/mrs-mukherji/savitri-devi-rockwell-inscription.jpg)
+*Her married name, in her own hand: an inscription on a photograph of herself to George Lincoln Rockwell, founder of the American Nazi Party, Yuletide 1961. The photograph is not shown. Courtesy: savitridevi.org.*
+
 His two pages survive in a Ministry of External Affairs file at the National Archives of India: **File No. 12(23)-Eur.II/49 (Secret)**, “Trial and deportation of Mrs Savitri Devi Mukherji from Germany” and “question of repatriation of Mrs Mukherji to India.” On the cover, in red, someone wrote *Destroy after year 1959.* Nobody did.
 
 This post is about that file. It does not retell her life. The world now knows her, through her admirers and her critics, as Savitri Devi: born Maximiani Portas in Lyon in 1905, a mystic of Hitler-worship, one of the earliest deniers of the Holocaust, and in recent years a figure revived by the online far right. Most of that story rests on what she wrote and said about herself. The file is something else. It is what officials in Düsseldorf, Berlin, New Delhi, Poona and Calcutta wrote about her while it was happening.
@@ -160,9 +163,6 @@ In February 1944 the Intelligence Bureau said she must on no account leave India
 ## Why she is back
 
 Savitri Devi died in obscurity in 1982. Her revival began in the West, where a white-nationalist publisher reissued her books and the alt-right borrowed her language; in 2025 *Prospect* reported alt-right groups on X “increasingly promoting” her views.
-
-![Handwritten inscription: “To Commander Rockwell, With a joyous ‘Heil Hitler’! from Savitri Devi Mukherji, Yuletide 1961”](/images/mrs-mukherji/savitri-devi-rockwell-inscription.jpg)
-*Her inscription on a photograph of herself, inscribed to George Lincoln Rockwell, founder of the American Nazi Party, Yuletide 1961. The photograph is not shown. Courtesy: savitridevi.org.*
 
 Ask Sumanta Banerjee why she matters in India, and his answer is blunt. “Her disciples are ruling India today,” he says. “The members of the present Modi-led BJP government have imbibed Savitri Devi’s ideology.”
 
