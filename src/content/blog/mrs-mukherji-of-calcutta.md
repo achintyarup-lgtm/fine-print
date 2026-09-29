@@ -66,7 +66,7 @@ Then comes the line quoted at the top of this post. It is not her own words. It 
 
 > “It appears that she told the Public Safety Officer that her biggest ambition was to get a baby from Adolf Hitler, and she believes that he is still alive.”
 
-Francis wrote it down anyway, in an official report to his government. That he did so is a fact. Whether she said it, in those words, is not established.
+Francis put the remark in an official report to his government. That he did so is a fact. Whether she said it, in those words, is not established.
 
 Francis also recorded that there was “no indication, whatsoever, that she was an irresponsible person,” and that she “lives in a world of her own.” His own verdict is in his last paragraph, from an officer of the Government of India: “Although she deserves the death penalty I was told that she may at the most be given a few months’ imprisonment and then be ordered to be deported to India.”
 
