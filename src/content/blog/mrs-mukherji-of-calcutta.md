@@ -1,11 +1,30 @@
 ---
-title: "Mrs Mukherji of Calcutta and the ‘baby from Adolf Hitler’"
+title: "Mrs Mukherji, the Nazi from Calcutta"
 standfirst: "In March 1949 an Indian officer watched a Calcutta editor’s wife give the Nazi salute in a Düsseldorf court, and recorded, at second hand, a remark she was said to have made about Hitler. The file Delhi marked for destruction shows what the Government of India did next, and what her husband did not."
 description: "In March 1949 an Indian officer watched a Calcutta editor’s wife give the Nazi salute in a Düsseldorf court, and recorded, at second hand, a remark she was said to have made about Hitler. The file Delhi marked for destruction shows what the Government of India did next, and what her husband did not."
 date: "2026-09-28"
 ogImage: og/mrs-mukherji-og.jpg
 draft: false
 ---
+
+![Portrait photograph of a young European woman with dark wavy hair, drop earrings and a pearl necklace](/images/mrs-mukherji/maximiani-portas-young.jpg)
+*Maximiani Portas, later Savitri Devi, as a young woman in France. Date unknown. Photograph: Savitri Devi Archive.*
+
+> “…she told the Public Safety Officer that her biggest ambition was to get a baby from Adolf Hitler, and she believes that he is still alive.”
+>
+> — Major T. P. Francis, Indian Military Mission, Berlin, report of 22 March 1949. His sentence begins “It appears that”: he is recording at second hand a remark she was said to have made to a British officer
+
+It was a sultry November evening in Kolkata. On Harish Chatterjee Street, a few buildings from the heavily guarded home of West Bengal’s chief minister, the state’s elected head, I stood before a huge padlocked iron gate in near-darkness. Behind it was the Hindu Mission, founded in 1926 to convert non-Hindus to Hinduism. I peeped through a crack but saw only black. Nobody could say who ran the place. Hesitantly, I dialled a number scraped off the internet, and someone actually picked up. Soon a courteous man arrived with an aide and unlocked the gate.
+
+![The courtyard of the Hindu Mission at night, strung with faded paper Indian flags, with a lit shrine to a blue-skinned Vishnu at the far end](/images/mrs-mukherji/hindu-mission-courtyard-2017.jpg)
+*The courtyard of the Hindu Mission, Harish Chatterjee Street, Kolkata. Photograph: Achintyarup Ray, November 2017.*
+
+Inside it was dark. They switched on a few tube-lights, waking sleeping pigeons. A long, pillared hall, shedding plaster, opened onto a courtyard strung with faded paper Indian flags. In one shrine, a marble Buddha sat beneath a hymn declaring him an incarnation of Vishnu, one of Hinduism’s principal gods. In another, a life-size, blue-skinned Vishnu stood garlanded beside the founder’s portrait.
+
+![A marble Buddha on a pedestal in a small shrine room, with Bengali inscriptions on the wall behind](/images/mrs-mukherji/hindu-mission-buddha-2017.jpg)
+*The Buddha shrine at the Hindu Mission. The pedestal carries a line from Jayadeva’s hymn to the ten incarnations of Vishnu, hailing the Buddha as one of them. Photograph: Achintyarup Ray, November 2017.*
+
+By her own account to British police in 1949, it was for this Mission that a European woman calling herself Savitri Devi worked in the late 1930s. In March 1949 she stood in a German courtroom.
 
 She was brought into the Summary Court at Düsseldorf at about twelve o’clock on Monday, 14 March 1949. Before the proceedings began, she turned to the press benches and gave them the Hitler salute.
 
