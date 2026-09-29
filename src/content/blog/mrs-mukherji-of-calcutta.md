@@ -66,8 +66,6 @@ Then comes the line quoted at the top of this post. It is not her own words. It 
 
 > “It appears that she told the Public Safety Officer that her biggest ambition was to get a baby from Adolf Hitler, and she believes that he is still alive.”
 
-Four things should be clear about that sentence. Francis did not hear her say it. He records that she told a Public Safety Officer of the British administration, whom he does not name, and he does not say how the remark reached him. Nor does he say when or where she is supposed to have said it; the only window the documents allow is between her arrest on 20 February and his report on 22 March. He hedges it himself: “It appears.” And it is not in the British Public Safety report of 28 February, which quotes her at length. On the record as it survives, then, this is hearsay at two removes: what an Indian officer wrote that she had said to a British officer. The British officer’s own note of the conversation, if he made one, has not been found.
-
 Francis wrote it down anyway, in an official report to his government. That he did so is a fact. Whether she said it, in those words, is not established.
 
 Francis also recorded that there was “no indication, whatsoever, that she was an irresponsible person,” and that she “lives in a world of her own.” His own verdict is in his last paragraph, from an officer of the Government of India: “Although she deserves the death penalty I was told that she may at the most be given a few months’ imprisonment and then be ordered to be deported to India.”
