@@ -154,6 +154,8 @@ body {
 
 /* Images in article text never spill past their column */
 .flow img { max-width: 100%; height: auto; }
+/* An image on its own line sits above its caption, not beside it */
+.flow p > img { display: block; margin-bottom: 0.4em; }
 
 h1, h2, h3 {
   font-family: var(--display);
