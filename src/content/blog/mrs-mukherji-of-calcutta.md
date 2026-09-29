@@ -7,12 +7,16 @@ ogImage: og/mrs-mukherji-og.jpg
 draft: false
 ---
 
-![Portrait photograph of a young European woman with dark wavy hair, drop earrings and a pearl necklace](/images/mrs-mukherji/maximiani-portas-young.jpg)
-*Maximiani Portas, later Savitri Devi, as a young woman in France. Date unknown. Photograph: Savitri Devi Archive.*
-
 > “…she told the Public Safety Officer that her biggest ambition was to get a baby from Adolf Hitler, and she believes that he is still alive.”
 >
 > — Major T. P. Francis, Indian Military Mission, Berlin, report of 22 March 1949. His sentence begins “It appears that”: he is recording at second hand a remark she was said to have made to a British officer
+
+<div style="display:flex;gap:12px;margin:1.5rem 0 0.5rem;">
+<img src="/images/mrs-mukherji/maximiani-portas-young-pair.jpg" alt="Portrait photograph of a young European woman with dark wavy hair and drop earrings" style="width:50%;height:auto;margin:0;" />
+<img src="/images/mrs-mukherji/hitler-portrait.jpg" alt="Black-and-white head-and-shoulders portrait of Adolf Hitler in a jacket and tie" style="width:50%;height:auto;margin:0;" />
+</div>
+
+*Left: Maximiani Portas, later Savitri Devi, as a young woman in France. Date unknown. Photograph: Savitri Devi Archive. Right: Adolf Hitler. Photograph: Bundesarchiv, Bild 183-S33882 / CC-BY-SA 3.0.*
 
 It was a sultry November evening in Kolkata. On Harish Chatterjee Street, a few buildings from the heavily guarded home of West Bengal’s chief minister, the state’s elected head, I stood before a huge padlocked iron gate in near-darkness. Behind it was the Hindu Mission, founded in 1926 to convert non-Hindus to Hinduism. I peeped through a crack but saw only black. Nobody could say who ran the place. Hesitantly, I dialled a number scraped off the internet, and someone actually picked up. Soon a courteous man arrived with an aide and unlocked the gate.
 
