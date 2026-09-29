@@ -18,7 +18,7 @@ draft: false
 
 *Left: Maximiani Portas, later Savitri Devi, as a young woman in France. Date unknown. Photograph: Savitri Devi Archive. Right: Adolf Hitler. Photograph: Bundesarchiv, Bild 183-S33882 / CC-BY-SA 3.0.*
 
-It was a sultry November evening in Kolkata. On Harish Chatterjee Street, a few buildings from the heavily guarded home of West Bengal’s chief minister, the state’s elected head, I stood before a huge padlocked iron gate in near-darkness. Behind it was the Hindu Mission, founded in 1926 to convert non-Hindus to Hinduism. I peeped through a crack but saw only black. Nobody could say who ran the place. Hesitantly, I dialled a number scraped off the internet, and someone actually picked up. Soon a courteous man arrived with an aide and unlocked the gate.
+It was a sultry November evening in Kolkata. On Harish Chatterjee Street, a few buildings from the heavily guarded home of West Bengal’s chief minister, the state’s elected head, I stood before a huge padlocked iron gate in near-darkness. Behind it was the Hindu Mission, founded in the mid-1920s to convert non-Hindus to Hinduism. I peeped through a crack but saw only black. Nobody could say who ran the place. Hesitantly, I dialled a number scraped off the internet, and someone actually picked up. Soon a courteous man arrived with an aide and unlocked the gate.
 
 ![The courtyard of the Hindu Mission at night, strung with faded paper Indian flags, with a lit shrine to a blue-skinned Vishnu at the far end](/images/mrs-mukherji/hindu-mission-courtyard-2017.jpg)
 *The courtyard of the Hindu Mission, Harish Chatterjee Street, Kolkata. Photograph: Achintyarup Ray, November 2017.*
@@ -111,7 +111,7 @@ A month earlier, in open court, she had called every statement against her “pe
 ## Calcutta answers, and the price is set
 
 ![Asit Krishna Mukherji in a white shawl, smiling, standing by a window](/images/mrs-mukherji/asit-krishna-mukherji.jpg)
-*Asit Krishna Mukherji, Calcutta, undated. Photograph: Wikimedia Commons (public domain).*
+*Asit Krishna Mukherji, Calcutta, undated. Photograph: Wikimedia Commons.*
 
 On 28 May West Bengal replied by telegram. She was the “LEGALLY MARRIED WIFE OF ASHIT KRISHNA MUKHERJI WHO IS PREPARED RECEIVE HER IN INDIA AND MEET REPATRIATION CHARGES.”
 
