@@ -42,7 +42,7 @@ In the gallery sat Major T. P. Francis, consular officer of the Indian Military 
 ![Profile photograph of Savitri Devi in middle age wearing a large swastika earring, beside her handwritten inscription: “To Commander Rockwell, With a joyous ‘Heil Hitler’! from Savitri Devi Mukherji, Yuletide 1961”](/images/mrs-mukherji/savitri-devi-rockwell-1961.jpg)
 *Savitri Devi, wearing a swastika earring, in a photograph she inscribed with her married name to George Lincoln Rockwell, founder of the American Nazi Party, Yuletide 1961. Courtesy: savitridevi.org.*
 
-His two pages survive in a Ministry of External Affairs file at the National Archives of India: **File No. 12(23)-Eur.II/49 (Secret)**, “Trial and deportation of Mrs Savitri Devi Mukherji from Germany” and “question of repatriation of Mrs Mukherji to India.” On the cover, in red, someone wrote *Destroy after year 1959.* Nobody did.
+His two pages survive in a Ministry of External Affairs file at the National Archives of India, where I found them: **File No. 12(23)-Eur.II/49 (Secret)**, “Trial and deportation of Mrs Savitri Devi Mukherji from Germany” and “question of repatriation of Mrs Mukherji to India.” On the cover, in red, someone wrote *Destroy after year 1959.* Nobody did.
 
 This post is about that file. It does not retell her life. The world now knows her, through her admirers and her critics, as Savitri Devi: born Maximiani Portas in Lyon in 1905, a mystic of Hitler-worship, one of the earliest deniers of the Holocaust, and in recent years a figure revived by the online far right. Most of that story rests on what she wrote and said about herself. The file is something else. It is what officials in Düsseldorf, Berlin, New Delhi, Poona and Calcutta wrote about her while it was happening.
 
@@ -95,7 +95,7 @@ On 5 April 1949 the Control Commission High Court at Düsseldorf sentenced her t
 
 The official handling it, P. A. Menon, Joint Secretary in External Affairs, wrote on the same day that she appeared to have come to India in 1932. He also wrote that she had married Mukherji “with the sole purpose of getting a passport to travel to Germany.” Both statements come straight from the British report, and so from her.
 
-India’s own records said something different about the first. A Bengal Special Branch note of 1940, in a separate 1944 file at the National Archives, records her arriving at Dhanushkodi on 17 May 1935. Delhi never checked. By October 1949 the Ministry was telling the Indian Embassy in Paris, as settled fact, that she had married Mukherji on 29 September 1939. In April the same date had been what she “claims.”
+India’s own records said something different about the first. A Bengal Special Branch note of 1940, in a separate 1944 file I traced at the National Archives, records her arriving at Dhanushkodi on 17 May 1935. Delhi never checked. By October 1949 the Ministry was telling the Indian Embassy in Paris, as settled fact, that she had married Mukherji on 29 September 1939. In April the same date had been what she “claims.”
 
 ## “Unless we are forced to do so”
 
