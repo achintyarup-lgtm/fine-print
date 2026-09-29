@@ -16,7 +16,7 @@ draft: false
 <img src="/images/mrs-mukherji/hitler-portrait.jpg" alt="Black-and-white head-and-shoulders portrait of Adolf Hitler in a jacket and tie" style="width:50%;height:auto;margin:0;" />
 </div>
 
-*Left: Maximiani Portas, later Savitri Devi, as a young woman in France. Date unknown. Photograph: Savitri Devi Archive. Right: Adolf Hitler. Photograph: Bundesarchiv, Bild 183-S33882 / CC-BY-SA 3.0.*
+*Left: Maximiani Portas, later Savitri Devi, as a young woman in France. Date unknown. Courtesy: savitridevi.org. Right: Adolf Hitler. Photograph: Bundesarchiv, Bild 183-S33882 / CC-BY-SA 3.0.*
 
 It was a sultry November evening in Kolkata. On Harish Chatterjee Street, a few buildings from the heavily guarded home of West Bengal’s chief minister, the state’s elected head, I stood before a huge padlocked iron gate in near-darkness. Behind it was the Hindu Mission, founded in the mid-1920s to convert non-Hindus to Hinduism. I peeped through a crack but saw only black. Nobody could say who ran the place. Hesitantly, I dialled a number scraped off the internet, and someone actually picked up. Soon a courteous man arrived with an aide and unlocked the gate.
 
@@ -39,7 +39,7 @@ His two pages survive in a Ministry of External Affairs file at the National Arc
 This post is about that file. It does not retell her life. The world now knows her, through her admirers and her critics, as Savitri Devi: born Maximiani Portas in Lyon in 1905, a mystic of Hitler-worship, one of the earliest deniers of the Holocaust, and in recent years a figure revived by the online far right. Most of that story rests on what she wrote and said about herself. The file is something else. It is what officials in Düsseldorf, Berlin, New Delhi, Poona and Calcutta wrote about her while it was happening.
 
 ![Savitri Devi as an old woman in a white sari, holding a cup, in a dim room](/images/mrs-mukherji/savitri-devi-delhi-1980.webp)
-*Savitri Devi in Delhi, 1980. Photograph: Savitri Devi Archive.*
+*Savitri Devi in Delhi, 1980. Courtesy: savitridevi.org.*
 
 To her husband’s family in Calcutta she was Savitri Mami. In 1969 Sumanta Banerjee, the journalist and Asit Mukherji’s nephew, got a phone call at his office from a colleague: a peculiar European woman had turned up claiming to be his aunt. He went and found her in a sari with a saffron border and large swastika earrings, and knew at once it was Savitri Mami. She had heard he had married, and married a Muslim, and she wanted to see his wife. Then, as he told BBC Radio 4 in 2017, she took a plastic ruler out of her bag and measured his wife’s nose. Her verdict: “She is more Aryan than you. You have made a good choice.” Banerjee had already written about her in *The Times of India* in 1999, under the headline “Memories of my Nazi Maami.”
 
