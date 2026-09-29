@@ -4,6 +4,7 @@ standfirst: "In March 1949 an Indian officer watched a Calcutta editor’s wife 
 description: "Savitri Devi, Hitler’s devotee and a Calcutta editor’s wife, stood trial in Düsseldorf in 1949. A secret Indian file shows how Delhi tried not to take her back."
 date: "2026-09-28"
 ogImage: og/mrs-mukherji-og-2.jpg
+cover: savitri-devi-cover.jpg
 draft: false
 ---
 
