@@ -39,8 +39,8 @@ Ten years after the Mission published her pamphlet, she stood in a courtroom in 
 
 In the gallery sat Major T. P. Francis, consular officer of the Indian Military Mission in Berlin. He had been sent to watch because the defendant, on paper, was an Indian. She was Mrs Savitri Devi Mukherji, wife of Asit Krishna Mukherji of 1 Wellesley Street, Calcutta. Eight days later he typed up what he had seen.
 
-![Handwritten inscription: “To Commander Rockwell, With a joyous ‘Heil Hitler’! from Savitri Devi Mukherji, Yuletide 1961”](/images/mrs-mukherji/savitri-devi-rockwell-inscription.jpg)
-*Her married name, in her own hand: an inscription on a photograph of herself to George Lincoln Rockwell, founder of the American Nazi Party, Yuletide 1961. The photograph is not shown. Courtesy: savitridevi.org.*
+![Profile photograph of Savitri Devi in middle age wearing a large swastika earring, beside her handwritten inscription: “To Commander Rockwell, With a joyous ‘Heil Hitler’! from Savitri Devi Mukherji, Yuletide 1961”](/images/mrs-mukherji/savitri-devi-rockwell-1961.jpg)
+*Savitri Devi, wearing a swastika earring, in a photograph she inscribed with her married name to George Lincoln Rockwell, founder of the American Nazi Party, Yuletide 1961. Courtesy: savitridevi.org.*
 
 His two pages survive in a Ministry of External Affairs file at the National Archives of India: **File No. 12(23)-Eur.II/49 (Secret)**, “Trial and deportation of Mrs Savitri Devi Mukherji from Germany” and “question of repatriation of Mrs Mukherji to India.” On the cover, in red, someone wrote *Destroy after year 1959.* Nobody did.
 
