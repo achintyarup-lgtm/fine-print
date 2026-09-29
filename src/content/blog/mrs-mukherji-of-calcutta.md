@@ -24,7 +24,7 @@ It was a sultry November evening in Kolkata. On Harish Chatterjee Street, a few 
 ![The courtyard of the Hindu Mission at night, strung with faded paper Indian flags, with a lit shrine to a blue-skinned Vishnu at the far end](/images/mrs-mukherji/hindu-mission-courtyard-2017.jpg)
 *The courtyard of the Hindu Mission, Harish Chatterjee Street, Kolkata. Photograph: Achintyarup Ray, November 2017.*
 
-Inside it was dark. They switched on a few tube-lights, waking sleeping pigeons. A long, pillared hall, shedding plaster, opened onto a courtyard strung with faded paper Indian flags. In one shrine, a marble Buddha sat beneath a hymn declaring him an incarnation of Vishnu, one of Hinduism’s principal gods. In another, a life-size, blue-skinned Vishnu stood garlanded beside the founder’s portrait.
+Inside it was dark. They switched on a few “tube-lights”, waking sleeping pigeons. A long, pillared hall, shedding plaster, opened onto a courtyard strung with faded paper Indian flags. In one shrine, a marble Buddha sat beneath a hymn declaring him an incarnation of Vishnu, one of Hinduism’s principal gods. In another, a life-size, blue-skinned Vishnu stood garlanded beside the founder’s portrait.
 
 ![A long pillared hall at night with chequered tiles and paper flags strung across the courtyard](/images/mrs-mukherji/hindu-mission-hall-2017.jpg)
 *The pillared hall of the Hindu Mission. Photograph: Achintyarup Ray, November 2017.*
