@@ -25,16 +25,17 @@ It was a sultry November evening in Kolkata. On Harish Chatterjee Street, a few 
 
 Inside it was dark. They switched on a few tube-lights, waking sleeping pigeons. A long, pillared hall, shedding plaster, opened onto a courtyard strung with faded paper Indian flags. In one shrine, a marble Buddha sat beneath a hymn declaring him an incarnation of Vishnu, one of Hinduism’s principal gods. In another, a life-size, blue-skinned Vishnu stood garlanded beside the founder’s portrait.
 
-![A marble Buddha on a pedestal in a small shrine room, with Bengali inscriptions on the wall behind](/images/mrs-mukherji/hindu-mission-buddha-2017.jpg)
-*The Buddha shrine at the Hindu Mission. The pedestal carries a line from Jayadeva’s hymn to the ten incarnations of Vishnu, hailing the Buddha as one of them. Photograph: Achintyarup Ray, November 2017.*
+![A long pillared hall at night with chequered tiles and paper flags strung across the courtyard](/images/mrs-mukherji/hindu-mission-hall-2017.jpg)
+*The pillared hall of the Hindu Mission. Photograph: Achintyarup Ray, November 2017.*
 
-By her own account to British police in 1949, it was for this Mission that a European woman calling herself Savitri Devi worked in the late 1930s.
+The man in the founder’s portrait is named on its mount: Srimat Swami Satyananda Saraswati. Bengal’s Special Branch in 1938 called him “the militant Missionary leader.” His Mission campaigned for *shuddhi*, bringing converts to Christianity and Islam back into Hinduism (in today’s language, *ghar wapsi*, or “homecoming”), and for Hindu unity, and from 1930 worked among the Namasudras, a caste then treated as untouchable.
 
-The Mission was the work of Swami Satyananda, whom Bengal’s Special Branch in 1938 called “the militant Missionary leader.” It campaigned for *shuddhi*, bringing converts to Christianity and Islam back into Hinduism (in today’s language, *ghar wapsi*, or “homecoming”), and for Hindu unity, and from 1930 worked among the Namasudras, a caste then treated as untouchable. In 1939 it published her *A Warning to the Hindus*, with a foreword by Ganesh Damodar Savarkar, elder brother of V. D. Savarkar. Whether Satyananda shared her Hitler-worship depends on whose account you read, and every version traces back to her own writings.
+![A framed, hand-tinted photograph of an elderly monk in saffron robes seated cross-legged, hanging on a pink wall](/images/mrs-mukherji/satyananda-portrait-2017.jpg)
+*Swami Satyananda Saraswati, in the portrait that hangs at the Hindu Mission. Photograph: Achintyarup Ray, November 2017.*
 
-In March 1949 she stood in a German courtroom.
+By her own account to British police in 1949, it was for this Mission that a European woman calling herself Savitri Devi worked in the late 1930s. In 1939 the Mission published her *A Warning to the Hindus*, with a foreword by Ganesh Damodar Savarkar, elder brother of V. D. Savarkar. Whether Satyananda shared her Hitler-worship depends on whose account you read, and every version traces back to her own writings.
 
-She was brought into the Summary Court at Düsseldorf at about twelve o’clock on Monday, 14 March 1949. Before the proceedings began, she turned to the press benches and gave them the Hitler salute.
+Ten years after the Mission published her pamphlet, she stood in a courtroom in occupied Germany. She was brought into the Summary Court at Düsseldorf at about twelve o’clock on Monday, 14 March 1949. Before the proceedings began, she turned to the press benches and gave them the Hitler salute.
 
 In the gallery sat Major T. P. Francis, consular officer of the Indian Military Mission in Berlin. He had been sent to watch because the defendant, on paper, was an Indian. She was Mrs Savitri Devi Mukherji, wife of Asit Krishna Mukherji of 1 Wellesley Street, Calcutta. Eight days later he typed up what he had seen.
 
@@ -159,6 +160,9 @@ In February 1944 the Intelligence Bureau said she must on no account leave India
 ## Why she is back
 
 Savitri Devi died in obscurity in 1982. Her revival began in the West, where a white-nationalist publisher reissued her books and the alt-right borrowed her language; in 2025 *Prospect* reported alt-right groups on X “increasingly promoting” her views.
+
+![Handwritten inscription: “To Commander Rockwell, With a joyous ‘Heil Hitler’! from Savitri Devi Mukherji, Yuletide 1961”](/images/mrs-mukherji/savitri-devi-rockwell-inscription.jpg)
+*Her inscription on a photograph of herself, inscribed to George Lincoln Rockwell, founder of the American Nazi Party, Yuletide 1961. The photograph is not shown. Courtesy: savitridevi.org.*
 
 Ask Sumanta Banerjee why she matters in India, and his answer is blunt. “Her disciples are ruling India today,” he says. “The members of the present Modi-led BJP government have imbibed Savitri Devi’s ideology.”
 
