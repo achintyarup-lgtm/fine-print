@@ -152,6 +152,9 @@ body {
 
 .flow > * + * { margin-block-start: 1.35em; }
 
+/* Images in article text never spill past their column */
+.flow img { max-width: 100%; height: auto; }
+
 h1, h2, h3 {
   font-family: var(--display);
   font-weight: 400;
