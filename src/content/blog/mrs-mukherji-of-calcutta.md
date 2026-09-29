@@ -62,7 +62,7 @@ She was, he wrote, “extremely bold” and “only too willing to give evidence
 
 At the end, refused her speech, she said she was “perfectly proud of whatever she had done and was perfectly willing to face any consequences.” She signed the statement in court.
 
-Then comes the line that gives this post its title. It is not her own words. It is Major Francis, in his report of 22 March 1949, recording at second hand something she is said to have told a British officer. Here is the sentence exactly as he typed it:
+Then comes the line quoted at the top of this post. It is not her own words. It is Major Francis, in his report of 22 March 1949, recording at second hand something she is said to have told a British officer. Here is the sentence exactly as he typed it:
 
 > “It appears that she told the Public Safety Officer that her biggest ambition was to get a baby from Adolf Hitler, and she believes that he is still alive.”
 
