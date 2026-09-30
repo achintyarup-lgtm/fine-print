@@ -19,7 +19,7 @@ draft: false
 
 *Left: Maximiani Portas, later Savitri Devi, as a young woman in France. Date unknown. Courtesy: savitridevi.org. Right: Adolf Hitler. Photograph: Bundesarchiv, Bild 183-S33882 / CC-BY-SA 3.0.*
 
-It was a sultry November evening in Kolkata. On Harish Chatterjee Street, a few buildings from the heavily guarded home of Mamata Banerjee, then West Bengal’s chief minister, I stood before a huge padlocked iron gate in near-darkness. Behind it was the Hindu Mission, founded in the mid-1920s to convert non-Hindus to Hinduism. I peeped through a crack but saw only black. Nobody could say who ran the place. Hesitantly, I dialled a number scraped off the internet, and someone actually picked up. Soon a courteous man arrived with an aide and unlocked the gate.
+It was a smoggy November evening in Kolkata. On Harish Chatterjee Street, a few buildings from the heavily guarded home of Mamata Banerjee, then West Bengal’s chief minister, I stood before a huge padlocked iron gate in near-darkness. Behind it was the Hindu Mission, founded in the mid-1920s to convert non-Hindus to Hinduism. I peeped through a crack but saw only black. Nobody could say who ran the place. Hesitantly, I dialled a number scraped off the internet, and someone actually picked up. Soon a courteous man arrived with an aide and unlocked the gate.
 
 ![The courtyard of the Hindu Mission at night, strung with faded paper Indian flags, with a lit shrine to a blue-skinned Vishnu at the far end](/images/mrs-mukherji/hindu-mission-courtyard-2017.jpg)
 *The courtyard of the Hindu Mission, Harish Chatterjee Street, Kolkata. Photograph: Achintyarup Ray, November 2017.*
