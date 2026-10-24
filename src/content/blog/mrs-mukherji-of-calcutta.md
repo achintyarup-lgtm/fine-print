@@ -2,6 +2,7 @@
 title: "Mrs Mukherji, the Nazi from Calcutta"
 standfirst: "In March 1949 an Indian officer watched a Calcutta editor’s wife give the Nazi salute in a Düsseldorf court, and recorded, at second hand, a remark she was said to have made about Hitler. The file Delhi marked for destruction shows what the Government of India did next, and what her husband did not."
 description: "Savitri Devi, Hitler’s devotee and a Calcutta editor’s wife, stood trial in Düsseldorf in 1949. A secret Indian file shows how Delhi tried not to take her back."
+seoTitle: "Savitri Devi, Hitler’s Devotee: What India’s Secret File Shows"
 date: "2026-09-28"
 ogImage: og/mrs-mukherji-og-2.jpg
 cover: savitri-devi-cover.jpg
@@ -13,7 +14,7 @@ draft: false
 > — Major T. P. Francis, Indian Military Mission, Berlin, report of 22 March 1949. His sentence begins “It appears that”: he is recording at second hand a remark she was said to have made to a British officer
 
 <div style="display:flex;gap:12px;margin:1.5rem 0 0.5rem;">
-<img src="/images/mrs-mukherji/maximiani-portas-young-pair.jpg" alt="Portrait photograph of a young European woman with dark wavy hair and drop earrings" style="width:50%;height:auto;margin:0;" />
+<img src="/images/mrs-mukherji/maximiani-portas-young-pair.jpg" alt="Savitri Devi (born Maximiani Portas) as a young woman: portrait photograph with dark wavy hair and drop earrings" style="width:50%;height:auto;margin:0;" />
 <img src="/images/mrs-mukherji/hitler-portrait.jpg" alt="Black-and-white head-and-shoulders portrait of Adolf Hitler in a jacket and tie" style="width:50%;height:auto;margin:0;" />
 </div>
 
@@ -21,17 +22,17 @@ draft: false
 
 It was a smoggy November evening in Kolkata. On Harish Chatterjee Street, a few buildings from the heavily guarded home of Mamata Banerjee, then West Bengal’s chief minister, I stood before a huge padlocked iron gate in near-darkness. Behind it was the Hindu Mission, founded in the mid-1920s to convert non-Hindus to Hinduism. I peeped through a crack but saw only black. Nobody could say who ran the place. Hesitantly, I dialled a number scraped off the internet, and someone actually picked up. Soon a courteous man arrived with an aide and unlocked the gate.
 
-![The courtyard of the Hindu Mission at night, strung with faded paper Indian flags, with a lit shrine to a blue-skinned Vishnu at the far end](/images/mrs-mukherji/hindu-mission-courtyard-2017.jpg)
+![The courtyard of the Hindu Mission, Calcutta, at night, strung with faded paper Indian flags, with a lit shrine to a blue-skinned Vishnu at the far end](/images/mrs-mukherji/hindu-mission-courtyard-2017.jpg)
 *The courtyard of the Hindu Mission, Harish Chatterjee Street, Kolkata. Photograph: Achintyarup Ray, November 2017.*
 
 Inside it was dark. They switched on a few “tube-lights”, waking sleeping pigeons. A long, pillared hall, shedding plaster, opened onto a courtyard strung with faded paper Indian flags. In one shrine, a marble Buddha sat beneath a hymn declaring him an incarnation of Vishnu, one of Hinduism’s principal gods. In another, a life-size, blue-skinned Vishnu stood garlanded beside the founder’s portrait.
 
-![A long pillared hall at night with chequered tiles and paper flags strung across the courtyard](/images/mrs-mukherji/hindu-mission-hall-2017.jpg)
+![The Hindu Mission, Calcutta: a long pillared hall at night with chequered tiles and paper flags strung across the courtyard](/images/mrs-mukherji/hindu-mission-hall-2017.jpg)
 *The pillared hall of the Hindu Mission. Photograph: Achintyarup Ray, November 2017.*
 
 The man in the founder’s portrait is named on its mount: Srimat Swami Satyananda Saraswati. Bengal’s Special Branch in 1938 called him “the militant Missionary leader.” His Mission campaigned for *shuddhi*, bringing converts to Christianity and Islam back into Hinduism (in today’s language, *ghar wapsi*, or “homecoming”), and for Hindu unity, and from 1930 worked among the Namasudras, a caste then treated as untouchable.
 
-![A framed, hand-tinted photograph of an elderly monk in saffron robes seated cross-legged, hanging on a pink wall](/images/mrs-mukherji/satyananda-portrait-2017.jpg)
+![Swami Satyananda Saraswati, founder of the Hindu Mission, Calcutta: a framed, hand-tinted photograph of an elderly monk in saffron robes seated cross-legged, hanging on a pink wall](/images/mrs-mukherji/satyananda-portrait-2017.jpg)
 *Swami Satyananda Saraswati, in the portrait that hangs at the Hindu Mission. Photograph: Achintyarup Ray, November 2017.*
 
 By her own account to British police in 1949, it was for this Mission that a European woman calling herself Savitri Devi worked in the late 1930s. In 1939 the Mission published her *A Warning to the Hindus*, with a foreword by Ganesh Damodar Savarkar, elder brother of V. D. Savarkar. Whether Satyananda shared her Hitler-worship depends on whose account you read, and every version traces back to her own writings.
@@ -47,7 +48,7 @@ His two pages survive in a Ministry of External Affairs file at the National Arc
 
 This post is about that file. It does not retell her life. The world now knows her, through her admirers and her critics, as Savitri Devi: born Maximiani Portas in Lyon in 1905, a mystic of Hitler-worship, one of the earliest deniers of the Holocaust, and in recent years a figure revived by the online far right. Most of that story rests on what she wrote and said about herself. The file is something else. It is what officials in Düsseldorf, Berlin, New Delhi, Poona and Calcutta wrote about her while it was happening.
 
-![Savitri Devi as an old woman in a white sari, holding a cup, in a dim room](/images/mrs-mukherji/savitri-devi-delhi-1980.webp)
+![Savitri Devi (Maximiani Portas) as an old woman in a white sari, holding a cup, in a dim room in Delhi, 1980](/images/mrs-mukherji/savitri-devi-delhi-1980.webp)
 *Savitri Devi in Delhi, 1980. Courtesy: savitridevi.org.*
 
 To her husband’s nephews in Calcutta she was Savitri Mami. In 1969 Sumanta Banerjee, the journalist and Asit Mukherji’s nephew, got a phone call at home from a colleague: a peculiar European woman had turned up at the office claiming to be his aunt. He went and found her in a sari with a saffron border and large swastika earrings, and knew at once it was Savitri Mami. She had heard he had married, and married a Muslim, and she wanted to see his wife. Then, as he told BBC Radio 4 in 2017, she took a plastic ruler out of her bag and measured his wife’s nose. Her verdict: “She is more Aryan than you. You have made a good choice.” Banerjee had already written about her in *The Times of India* in 1999, under the headline “Memories of my Nazi Maami.”
@@ -117,7 +118,7 @@ A month earlier, in open court, she had called every statement against her “pe
 
 ## Calcutta answers, and the price is set
 
-![Asit Krishna Mukherji in a white shawl, smiling, standing by a window](/images/mrs-mukherji/asit-krishna-mukherji.jpg)
+![Asit Krishna Mukherji, Calcutta editor and husband of Savitri Devi, in a white shawl, smiling, standing by a window](/images/mrs-mukherji/asit-krishna-mukherji.jpg)
 *Asit Krishna Mukherji, Calcutta, undated. Photograph: Wikimedia Commons.*
 
 On 28 May West Bengal replied by telegram. She was the “LEGALLY MARRIED WIFE OF ASHIT KRISHNA MUKHERJI WHO IS PREPARED RECEIVE HER IN INDIA AND MEET REPATRIATION CHARGES.”
