@@ -1,5 +1,5 @@
 ---
-title: "Stalin's Bengal Prophecy"
+title: "Stalin’s Bengal Prophecy"
 standfirst: "In February 1951 Stalin told four Indian communist leaders that the Bengali provinces would be the first to break away from Pakistan. The Russian archive record says so plainly. The most widely cited English translation does not."
 description: "In 1951 Stalin predicted East Bengal would be first to break from Pakistan. The Russian record says so; the standard English translation turns it into a description."
 seoTitle: "Stalin Predicted Bangladesh in 1951: What the Russian Archive Shows"
@@ -47,7 +47,12 @@ Singh's text slips elsewhere. It renders the preceding sentence as "the people h
 
 Kashin reads it the same way. He writes that Stalin «предсказал» (predicted) it, citing RGASPI, fond 558, opis 11, delo 310, sheet 75. His article appeared in *Vostok (Oriens)*, the journal of the Institute of Oriental Studies, Moscow, in 2024 (No. 3).
 
-The English record notes it was taken down by V. Grigor'yan and dated 10 February 1951. The Wilson Center page also carries a scan of the Russian original, which a reader of Russian can check against the English.
+The English record notes it was taken down by V. Grigor'yan and dated 10 February 1951.
+
+The Russian original itself settles the matter. The typed record, scanned and published alongside the English on the Wilson Center Digital Archive, carries the sheet number 75 in the corner. The sentence reads exactly as Kashin quotes it: «Бенгальские провинции отпадут от Пакистана в первую очередь».
+
+![Typed Russian record of Stalin's conversation with CPI leaders, 9 February 1951, sheet 75: the passage on the partition of India ending with the sentence that the Bengali provinces will fall away from Pakistan first](/images/stalin-bengal/russian-original-l75.webp)
+*The Russian original, sheet 75. The last sentence: «Бенгальские провинции отпадут от Пакистана в первую очередь» — "The Bengali provinces will fall away from Pakistan first." Source: RGASPI, f. 558, op. 11, d. 310, l. 75, via the Wilson Center Digital Archive.*
 
 ## The road to that sentence
 
@@ -70,7 +75,7 @@ The Russian historian Larisa Chereshneva, in her 2009 doctoral dissertation, jud
 
 In the same conversation, Stalin called the partition a British swindle and told the Indian communists to campaign for reuniting the subcontinent. His remark on Bengal was offered as proof.
 
-The Wilson Center English has: "As regards the partition of India, that this was an act of fraud organized by the British." Kashin's Russian has the word «жульническую» — a swindling, fraudulent «штуку» (thing).
+The Wilson Center English has: "As regards the partition of India, that this was an act of fraud organized by the British." The Russian original has «жульническая штука, организованная англичанами»: a swindling, fraudulent thing organised by the English.
 
 Stalin then told the party to demand "a union between Pakistan, India, and Ceylon, \[both\] military and economic". He went on: "It will end with these three countries uniting... The leaders of Pakistan and Ceylon will oppose it but the people will crush them."
 
@@ -113,7 +118,7 @@ In the same talk Stalin asked whether India had considered a federation with Pak
 
 His interest in Pakistan's language was not new. Meeting Ambassador S. Radhakrishnan on 14 January 1950, Stalin had asked about Pakistan and "about language they spoke there".
 
-**What the record does not say.** Neither Menon's letter nor the 1950 telegram mentions Bengal, Bengali or Dhaka. There is no evidence that Stalin knew of the Bhasha Andolan or had it in mind. Kashin reports that the Soviet record of the Menon meeting could not be found in the Russian archives, so Menon's letter is the only account.
+**What the record does not say.** Neither Menon's letter nor the 1950 telegram mentions Bengal, Bengali or Dhaka. There is no evidence that Stalin knew of the Bhasha Andolan or had it in mind. Kashin reports that the Soviet record of the Menon meeting could not be found in the Russian archives. Every account therefore comes from Menon himself: his secret letter, and the version he published ten years later in his memoir *The Flying Troika* (1963). An outside trace exists too. On 19 February 1953 the American chargé in Moscow, Jacob Beam, cabled Washington that Menon had told him part of the talk was a "discussion of language problems in Russia and India". The cable does not mention Pakistan or Urdu.
 
 The juxtaposition is the reader's to weigh. A man who had predicted Bengal's break from Pakistan in 1951 dismissed Urdu, the language Dhaka's students had died resisting as the sole state language, as no real national language in 1953.
 
@@ -126,24 +131,25 @@ The forecast was a remark, not a policy. No document seen for this piece shows M
 
 - **The forecast stayed in the room.** It is not in the CPI's 1951 Tactical Line, and I found no Indian or Bengali account of the meeting that reports it.
 - **One American claim, unconfirmed.** A CIA bulletin of 23 March 1952 said Dange had received instructions to concentrate party work in eastern India and East Pakistan for joint guerrilla activity. No Soviet document seen here confirms this.
-- **Second-hand sources.** The 1947 map remark comes through the Mitrokhin notes. The 1953 remarks rest on Menon's letter alone.
-- **The translation point** rests on two sources. Kashin's Russian and Singh's 2006 translation, both from the RGASPI file, agree on the future tense. The scan of the original, linked from the Wilson Center page, is still worth a look.
+- **Second-hand sources.** The 1947 map remark comes through the Mitrokhin notes. The 1953 remarks rest on Menon's own accounts, the 1953 letter and his 1963 memoir; an American cable of 19 February 1953 confirms only that language was discussed.
+- **The translation point** is settled by the original. The scan of sheet 75 has the future-tense «отпадут», as Kashin quotes it and as Singh translated it in 2006.
 
 Still to examine:
 
-1. The scan of RGASPI, f. 558, op. 11, d. 310, l. 75: the Russian original of the Bengal line.
-2. The Soviet embassy in Karachi's reports on the February 1952 Dhaka events, if any, in the AVPRF Pakistan files (f. 0117).
-3. *The Mitrokhin Archive II*, p. 347, for the exact wording and source of the 1947 remark.
+1. The Soviet embassy in Karachi's reports on the February 1952 Dhaka events, if any, in the AVPRF Pakistan files (f. 0117). These are not online and need a visit to the archive in Moscow.
+2. *The Mitrokhin Archive II*, p. 347, for the exact wording and source of the 1947 remark. The page is not available online; a 2007 Khaleej Times column renders the remark as "This country cannot last" but gives no page or source.
 
 ## Sources
 
 - Kashin V.P., [«Сталин и независимая Индия»](https://vo.ivran.ru/articles/3468/218355), *Vostok (Oriens)*, 2024, No. 3, pp. 57–68. Russian quotations from RGASPI f. 558, op. 11, d. 310–311.
 - Kashin V.P., [«Сталин и независимый Пакистан»](https://lk.ivran.ru/media/%D0%A1%D0%A2%D0%90%D0%9B%D0%98%D0%9D_%D0%98_%D0%9D%D0%95%D0%97%D0%90%D0%92%D0%98%D0%A1%D0%98%D0%9C%D0%AB%D0%99_%D0%9F%D0%90%D0%9A%D0%98%D0%A1%D0%A2%D0%90%D0%9D.pdf), *Vestnik Instituta vostokovedeniya RAN*, 2024, No. 1, pp. 187–194. AVPRF f. 0117; the 1947 map remark.
-- [Record of a Conversation between Stalin and representatives of the Indian Communist Party, 9 February 1951](https://digitalarchive.wilsoncenter.org/document/record-conversation-between-stalin-and-representatives-indian-communist-party), Wilson Center Digital Archive, trans. Gary Goldberg ([PDF](https://www.marxists.org/subject/india/cpi/cpi-cpsu-2-9-51.pdf)).
+- [Record of a Conversation between Stalin and representatives of the Indian Communist Party, 9 February 1951](https://digitalarchive.wilsoncenter.org/document/record-conversation-between-stalin-and-representatives-indian-communist-party), Wilson Center Digital Archive, trans. Gary Goldberg ([PDF](https://www.marxists.org/subject/india/cpi/cpi-cpsu-2-9-51.pdf)); [scan of the Russian original](https://digitalarchive.umd.edu/sites/default/files/shared-media/imported_document_original_file/1951-02-09%20Stalin-Rao%20Conversation%20%28Russian%29.pdf).
 - [Record of the Discussions of J.V. Stalin with the Representatives of the C.C. of the CPI, 9 February 1951](https://www.revolutionarydemocracy.org/rdv12n2/cpi2.htm), trans. Vijay Singh, *Revolutionary Democracy*, Vol. XII, No. 2, September 2006.
 - [Notes of the Discussion of J.V. Stalin with Representatives of the CC of the CPI, 2 March 1951](https://revolutionarydemocracy.org/rdv26n1/StalinDisc.htm), *Revolutionary Democracy*, April 2021.
 - [Tactical Line of the CPI, April 1951](https://www.revolutionarydemocracy.org/archive/cpi1951.htm), from *Documents of the History of the CPI*, Vol. VIII, ed. Mohit Sen.
 - [Three Conversations of J.V. Stalin and Indian Ambassadors 1950–1953](https://www.revolutionarydemocracy.org/rdv12n1/3convers.htm): Radhakrishnan telegram (NMML, J.N. (S.4) Vol. 34) and K.P.S. Menon's letter of 19 February 1953 (NMML, J.N. (S.4) Vol. 167).
+- ["Indian Ambassador to the Soviet Union K. P. S. Menon Interview with Stalin", 18 February 1953](https://digitalarchive.umd.edu/document/134393), Wilson Center Digital Archive, from K.P.S. Menon, *The Flying Troika* (London: Oxford University Press, 1963).
+- [Telegram 601.9161/2–1953, Chargé Jacob D. Beam to the Department of State, 19 February 1953](https://history.state.gov/historicaldocuments/frus1952-54v08/d543), *Foreign Relations of the United States, 1952–1954*, Vol. VIII.
 - J.V. Stalin, ["The Political Tasks of the University of the Peoples of the East"](https://www.marxists.org/reference/archive/stalin/works/1925/05/18.htm), 18 May 1925, *Works*, Vol. 7.
 - Chereshneva L.A., [doctoral dissertation on the independence and partition of India, 1939–47](https://www.dissercat.com/content/problema-nezavisimosti-i-razdela-kolonialnoi-indii-v-1939-1947-gg) (Lipetsk, 2009), on A.M. Dyakov.
 - Jawed Naqvi, ["Stalin's ghost over Kashmir"](https://www.dawn.com/news/1073615), *Dawn*, 10 July 2008.
