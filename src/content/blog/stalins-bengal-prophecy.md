@@ -5,6 +5,7 @@ description: "In 1951 Stalin predicted East Bengal would be first to break from 
 seoTitle: "Stalin Predicted Bangladesh in 1951: What the Russian Archive Shows"
 date: "2026-11-05"
 ogImage: "og/stalin-bengal-og.jpg"
+cover: "stalin-bengal-cover.jpg"
 draft: false
 ---
 
