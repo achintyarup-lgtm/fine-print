@@ -102,7 +102,7 @@ const schema = {
     var t=document.querySelector('[data-gc-total]');
     if(t)get('TOTAL',function(c){t.textContent=c;t.parentNode.hidden=false});
     var v=document.querySelector('[data-gc-views]');
-    if(v)get(location.pathname,function(c){v.querySelector('b').textContent=c;v.hidden=false});
+    if(v)get(location.pathname,function(c){v.innerHTML=c==='1'?' · Read once':' · Read <b>'+c+'</b> times';v.hidden=false});
   })();
   </script>
 </body>
