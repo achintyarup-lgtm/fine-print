@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Subscribe from '../components/Subscribe.astro';
+import Comments from '../components/Comments.astro';
 
 const { frontmatter } = Astro.props;
 
@@ -12,12 +13,13 @@ const printed = new Date(date).toLocaleDateString('en-IN', {
 
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const enc = encodeURIComponent;
+const slug = Astro.url.pathname.replace(/^\/+|\/+$/g, '');
 ---
 <BaseLayout title={`${seoTitle ?? title} — The Fine Print`} description={description ?? standfirst} image={ogImage} datePublished={date}>
   <article class="shell flow">
     <h1>{title}</h1>
     {standfirst && <p class="standfirst">{standfirst}</p>}
-    <p class="dateline">Achintyarup Ray · <time datetime={date}>{printed}</time></p>
+    <p class="dateline">Achintyarup Ray · <time datetime={date}>{printed}</time><span data-gc-views hidden> · Read <b></b> times</span></p>
 
     <slot />
   </article>
@@ -39,6 +41,8 @@ const enc = encodeURIComponent;
       <a href={`${import.meta.env.BASE_URL}contact`}>write to me</a>.
     </p>
   </div>
+
+  <Comments slug={slug} title={title} />
 </BaseLayout>
 
 <script>

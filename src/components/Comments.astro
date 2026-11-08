@@ -1,70 +1,123 @@
 ---
 /**
- * Giscus comments — threads live as GitHub Discussions in your own repo.
- * Free, no tracking, no database, and you own the data.
- *
- * SETUP (about ten minutes):
- *  1. Make the site repo public.
- *  2. Repo → Settings → General → Features → tick "Discussions".
- *  3. Install the Giscus app: https://github.com/apps/giscus
- *  4. Go to https://giscus.app, enter the repo, choose the
- *     "Announcements" discussion category and "pathname" mapping.
- *  5. Copy the four values it generates into the constants below.
- *
- * Note: commenters need a GitHub account. If you find that readers are
- * emailing you instead of commenting, swap this file for Hyvor Talk.
+ * Moderated reader comments.
+ * Readers submit through Web3Forms → the message arrives in Achintya's inbox.
+ * Approved comments are added by hand to src/data/comments.json, keyed by the
+ * article's slug, e.g.
+ *   "it-was-not-syphilis-that-killed-lenin": [
+ *     { "name": "…", "place": "Pune", "date": "2026-11-09", "text": "…" }
+ *   ]
+ * No reader needs an account; nothing appears until it has been approved.
  */
-const REPO       = 'achintyarup-lgtm/fine-print';
-const REPO_ID    = 'R_kgDOTzQ1uw';
-const CATEGORY   = 'Announcements';
-const CATEGORY_ID = 'DIC_kwDOTzQ1u84DDAbh';
+import all from '../data/comments.json';
+
+interface Props { slug: string; title: string }
+const { slug, title } = Astro.props;
+type C = { name: string; place?: string; date: string; text: string };
+const list: C[] = (all as Record<string, C[]>)[slug] ?? [];
+const ACCESS_KEY = '8d18b9f1-5c1d-4f6e-87f3-edcd39be933e';
+const fmt = (d: string) => new Date(d).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
+<section class="comments shell" id="comments" aria-label="Readers' responses">
+  <h2>Readers respond{list.length > 0 && <span> ({list.length})</span>}</h2>
 
-<section class="comments" aria-label="Comments">
-  <h2>Responses</h2>
-  <p class="comments__note">
-    Comments run on GitHub Discussions, so you will need a GitHub account to post.
-    If you would rather not, <a href={`${import.meta.env.BASE_URL}contact`}>write to me directly</a> —
-    corrections and documents especially welcome.
-  </p>
+  {list.length > 0 ? (
+    <ol class="comments__list">
+      {list.map((c) => (
+        <li>
+          <p class="comments__who"><b>{c.name}</b>{c.place && <span> · {c.place}</span>} · <time datetime={c.date}>{fmt(c.date)}</time></p>
+          {c.text.split(/\n+/).map((p) => <p>{p}</p>)}
+        </li>
+      ))}
+    </ol>
+  ) : (
+    <p class="comments__none">No responses yet. Be the first.</p>
+  )}
 
-  <script
-    src="https://giscus.app/client.js"
-    data-repo={REPO}
-    data-repo-id={REPO_ID}
-    data-category={CATEGORY}
-    data-category-id={CATEGORY_ID}
-    data-mapping="pathname"
-    data-strict="1"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="preferred_color_scheme"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async
-  ></script>
+  <form class="comments__form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value={ACCESS_KEY} />
+    <input type="hidden" name="subject" value={`The Fine Print · new comment · ${title}`} />
+    <input type="hidden" name="from_name" value="The Fine Print — comments" />
+    <input type="hidden" name="article" value={`${title} (${slug})`} />
+    <input type="checkbox" name="botcheck" class="comments__trap" tabindex="-1" autocomplete="off" />
+
+    <div class="comments__row2">
+      <label>Name<input type="text" name="name" required maxlength="60" autocomplete="name" /></label>
+      <label><span>Where from <small>(optional)</small></span><input type="text" name="place" maxlength="40" /></label>
+    </div>
+    <label><span>Email <small>(optional · never shown)</small></span><input type="email" name="email" autocomplete="email" /></label>
+    <label>Your comment<textarea name="comment" rows="5" required maxlength="3000"></textarea></label>
+
+    <button type="submit">Send comment</button>
+    <p class="comments__hint">Comments are read before they go up, so it may take a day or so for yours to appear.</p>
+    <p class="comments__status" role="status" aria-live="polite"></p>
+  </form>
 </section>
 
+<script>
+  document.querySelectorAll<HTMLFormElement>('form.comments__form').forEach((f) => {
+    const s = f.querySelector('.comments__status') as HTMLElement;
+    const b = f.querySelector('button') as HTMLButtonElement;
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      b.disabled = true; s.textContent = 'Sending…'; s.dataset.state = '';
+      try {
+        const r = await fetch(f.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(f) });
+        const j = await r.json();
+        if (!j.success) throw new Error(j.message);
+        f.reset();
+        s.textContent = 'Thank you — your comment has reached me and will appear here once I have read it.';
+        s.dataset.state = 'ok';
+      } catch {
+        s.textContent = 'Sorry, that did not go through. Please try again in a little while.';
+        s.dataset.state = 'err';
+      }
+      b.disabled = false;
+    });
+  });
+</script>
+
 <style>
-  .comments {
-    margin-block-start: 5rem;
-    padding-block-start: 2rem;
-    border-top: 1px solid var(--rule);
-  }
+  .comments { margin-block-start: 4rem; padding-block-start: 2rem; border-top: 1px solid var(--rule); }
   .comments h2 {
-    border: 0;
-    padding: 0;
-    margin: 0 0 0.75rem;
-    font-size: 0.8125rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-family: var(--body);
+    border: 0; padding: 0; margin: 0 0 1.25rem;
+    font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft);
   }
-  .comments__note {
-    font-size: 0.875rem;
-    color: var(--ink-soft);
-    margin-bottom: 2rem;
+  .comments__none { font-style: italic; color: var(--ink-soft); }
+  .comments__list { list-style: none; padding: 0; margin: 0 0 2.5rem; }
+  .comments__list li { padding: 1.1rem 0; border-bottom: 1px solid var(--rule); }
+  .comments__list li p { margin: 0.4rem 0 0; }
+  .comments__who { font-size: 0.875rem; color: var(--ink-soft); }
+  .comments__who b { color: var(--ink); }
+
+  .comments__form {
+    display: flex; flex-direction: column; gap: 1.4rem;
+    margin-block-start: 1.5rem; padding: 1.5rem; background: var(--paper-deep);
   }
+  .comments__row2 { display: grid; gap: 1.4rem; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 560px) { .comments__row2 { grid-template-columns: 1fr; } }
+  .comments__form label {
+    display: flex; flex-direction: column; gap: 0.4rem;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .comments__form small { text-transform: none; letter-spacing: 0; font-style: italic; }
+  .comments__form input[type='text'],
+  .comments__form input[type='email'],
+  .comments__form textarea {
+    font-family: var(--body); font-size: 1rem; color: var(--ink);
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 0; padding: 0.6rem 0.7rem;
+  }
+  .comments__form textarea { line-height: 1.55; resize: vertical; }
+  .comments__form input:focus, .comments__form textarea:focus { outline: none; border-color: var(--ochre); }
+  .comments__form button {
+    align-self: flex-start; font-family: var(--meta); font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--ink); color: var(--paper); border: 0; padding: 0.75rem 1.4rem; cursor: pointer;
+  }
+  .comments__form button:hover { background: var(--indigo); }
+  .comments__form button:disabled { opacity: 0.6; cursor: wait; }
+  .comments__hint { margin: 0; font-size: 0.8125rem; font-style: italic; color: var(--ink-soft); }
+  .comments__status { margin: 0; font-size: 0.9375rem; }
+  .comments__status[data-state='ok'] { color: var(--indigo); }
+  .comments__status[data-state='err'] { color: var(--alta); }
+  .comments__trap { position: absolute !important; left: -9999px; opacity: 0; height: 0; width: 0; }
 </style>
