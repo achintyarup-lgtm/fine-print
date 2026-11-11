@@ -1,40 +1,53 @@
 ---
 /**
- * Moderated reader comments.
- * Readers submit through Web3Forms → the message arrives in Achintya's inbox.
- * Approved comments are added by hand to src/data/comments.json, keyed by the
- * article's slug, e.g.
- *   "it-was-not-syphilis-that-killed-lenin": [
- *     { "name": "…", "place": "Pune", "date": "2026-11-09", "text": "…" }
- *   ]
- * No reader needs an account; nothing appears until it has been approved.
+ * Reader comments — posted instantly.
+ *
+ * A reader's comment goes to the Cloudflare relay (worker.js), which saves it as
+ *   src/data/comments/<slug>/<timestamp>.json
+ * in this repository. GitHub rebuilds the site and the comment appears for
+ * everyone within a minute or two; the person who posted sees it at once.
+ *
+ * To remove a comment: delete its file in src/data/comments/<slug>/ on GitHub.
+ *
+ * Older comments added by hand in src/data/comments.json still show as before.
+ * A copy of each comment (with the reader's email, if given) is also sent to
+ * Achintya's inbox through Web3Forms, as a notification only.
  */
-import all from '../data/comments.json';
+import legacy from '../data/comments.json';
+
+// ── Fill these two in after the Cloudflare setup ─────────────────────────────
+const RELAY_URL = 'https://fine-print-comments.list2005.workers.dev';
+const TURNSTILE_SITEKEY = '0x4AAAAAAF817glS-Z6le4Z8';
+// ─────────────────────────────────────────────────────────────────────────────
+const ACCESS_KEY = '8d18b9f1-5c1d-4f6e-87f3-edcd39be933e'; // Web3Forms (email notice)
 
 interface Props { slug: string; title: string }
 const { slug, title } = Astro.props;
 type C = { name: string; place?: string; date: string; text: string };
-const list: C[] = (all as Record<string, C[]>)[slug] ?? [];
-const ACCESS_KEY = '8d18b9f1-5c1d-4f6e-87f3-edcd39be933e';
-const fmt = (d: string) => new Date(d).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+
+const files = import.meta.glob<C>('../data/comments/*/*.json', { eager: true, import: 'default' });
+const posted: C[] = Object.entries(files)
+  .filter(([path]) => path.split('/').at(-2) === slug)
+  .map(([, c]) => c);
+const list: C[] = [...((legacy as Record<string, C[]>)[slug] ?? []), ...posted]
+  .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+const fmt = (d: string) => new Date(d).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
 ---
 <section class="comments shell" id="comments" aria-label="Readers' responses">
   <h2>Readers respond{list.length > 0 && <span> ({list.length})</span>}</h2>
 
-  {list.length > 0 ? (
-    <ol class="comments__list">
-      {list.map((c) => (
-        <li>
-          <p class="comments__who"><b>{c.name}</b>{c.place && <span> · {c.place}</span>} · <time datetime={c.date}>{fmt(c.date)}</time></p>
-          {c.text.split(/\n+/).map((p) => <p>{p}</p>)}
-        </li>
-      ))}
-    </ol>
-  ) : (
-    <p class="comments__none">No responses yet. Be the first.</p>
-  )}
+  <ol class="comments__list" hidden={list.length === 0}>
+    {list.map((c) => (
+      <li>
+        <p class="comments__who"><b>{c.name}</b>{c.place && <span> · {c.place}</span>} · <time datetime={c.date}>{fmt(c.date)}</time></p>
+        {c.text.split(/\n+/).map((p) => <p>{p}</p>)}
+      </li>
+    ))}
+  </ol>
+  {list.length === 0 && <p class="comments__none">No responses yet. Be the first.</p>}
 
-  <form class="comments__form" action="https://api.web3forms.com/submit" method="POST">
+  <form class="comments__form" data-relay={RELAY_URL} data-slug={slug}>
     <input type="hidden" name="access_key" value={ACCESS_KEY} />
     <input type="hidden" name="subject" value={`The Fine Print · new comment · ${title}`} />
     <input type="hidden" name="from_name" value="The Fine Print — comments" />
@@ -48,30 +61,70 @@ const fmt = (d: string) => new Date(d).toLocaleDateString('en-IN', { day: 'numer
     <label><span>Email <small>(optional · never shown)</small></span><input type="email" name="email" autocomplete="email" /></label>
     <label>Your comment<textarea name="comment" rows="5" required maxlength="3000"></textarea></label>
 
-    <button type="submit">Send comment</button>
-    <p class="comments__hint">Comments are read before they go up, so it may take a day or so for yours to appear.</p>
+    <div class="cf-turnstile" data-sitekey={TURNSTILE_SITEKEY} data-theme="light"></div>
+
+    <button type="submit">Post comment</button>
+    <p class="comments__hint">Your comment appears here as soon as you post it. Please keep it civil; I remove anything abusive.</p>
     <p class="comments__status" role="status" aria-live="polite"></p>
   </form>
 </section>
 
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 <script>
+  const fmt = (d: string) => new Date(d).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
+
   document.querySelectorAll<HTMLFormElement>('form.comments__form').forEach((f) => {
+    const section = f.closest('.comments') as HTMLElement;
+    const ol = section.querySelector('.comments__list') as HTMLOListElement;
     const s = f.querySelector('.comments__status') as HTMLElement;
     const b = f.querySelector('button') as HTMLButtonElement;
+
     f.addEventListener('submit', async (e) => {
       e.preventDefault();
-      b.disabled = true; s.textContent = 'Sending…'; s.dataset.state = '';
+      const fd = new FormData(f);
+      const token = String(fd.get('cf-turnstile-response') || '');
+      if (!token) { s.textContent = 'Please wait a moment for the check box above to finish, then post again.'; s.dataset.state = 'err'; return; }
+
+      b.disabled = true; s.textContent = 'Posting…'; s.dataset.state = '';
       try {
-        const r = await fetch(f.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(f) });
+        const r = await fetch(f.dataset.relay as string, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            slug: f.dataset.slug,
+            name: fd.get('name'), place: fd.get('place'), text: fd.get('comment'),
+            botcheck: fd.get('botcheck') ? 1 : 0, token,
+          }),
+        });
         const j = await r.json();
-        if (!j.success) throw new Error(j.message);
+        if (!j.ok) throw new Error(j.error);
+
+        // Email notice to Achintya (best effort; failure does not matter to the reader)
+        fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { Accept: 'application/json' }, body: fd }).catch(() => {});
+
+        // Show the comment straight away (textContent only — never raw HTML)
+        if (j.comment) {
+          const c = j.comment;
+          const li = document.createElement('li');
+          const who = document.createElement('p'); who.className = 'comments__who';
+          const bn = document.createElement('b'); bn.textContent = c.name; who.append(bn);
+          if (c.place) who.append(` · ${c.place}`);
+          const t = document.createElement('time'); t.dateTime = c.date; t.textContent = fmt(c.date);
+          who.append(' · ', t); li.append(who);
+          String(c.text).split(/\n+/).forEach((p: string) => { const el = document.createElement('p'); el.textContent = p; li.append(el); });
+          ol.append(li); ol.hidden = false;
+          section.querySelector('.comments__none')?.remove();
+          li.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
         f.reset();
-        s.textContent = 'Thank you — your comment has reached me and will appear here once I have read it.';
+        s.textContent = 'Thank you — your comment is up. Other readers will see it within a couple of minutes.';
         s.dataset.state = 'ok';
       } catch {
         s.textContent = 'Sorry, that did not go through. Please try again in a little while.';
         s.dataset.state = 'err';
       }
+      (window as any).turnstile?.reset();
       b.disabled = false;
     });
   });
