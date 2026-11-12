@@ -4,10 +4,10 @@ import '../styles/global.css';
 const {
   title = 'The Fine Print',
   description = 'What records say, and what they leave out. Long-form reporting on policy, environment, history and literature by Achintyarup Ray, built on RTI replies, archive files and documents prised loose.',
-  image = 'og/Fineprint_OG.png',  datePublished,
+  image = 'og/Fineprint_OG.png',  datePublished, canonicalUrl,
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonical = canonicalUrl ? new URL(canonicalUrl) : new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
 const schema = {
   '@context': 'https://schema.org',
@@ -77,6 +77,7 @@ const schema = {
       </div>
       <nav class="masthead__nav" aria-label="Main">
         <a href={import.meta.env.BASE_URL}>Articles</a>
+        <a href={`${import.meta.env.BASE_URL}proper-channel`}>Proper Channel</a>
         <a href={`${import.meta.env.BASE_URL}about`}>About</a>
         <a href={`${import.meta.env.BASE_URL}contact`}>Contact</a>
         <a href={`${import.meta.env.BASE_URL}rss.xml`}>RSS</a>

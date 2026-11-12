@@ -11,6 +11,9 @@ const blog = defineCollection({
     cover: z.string().optional(),
     ogImage: z.string().optional(),
     draft: z.boolean().default(false),
+    channel: z.string().optional(),
+    canonical: z.string().optional(),
+    coverAlt: z.string().optional(),
   }),
 });
 

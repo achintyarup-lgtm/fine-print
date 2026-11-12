@@ -2,10 +2,13 @@
 import BaseLayout from './BaseLayout.astro';
 import Subscribe from '../components/Subscribe.astro';
 import Comments from '../components/Comments.astro';
+import { Image } from 'astro:assets';
 
 const { frontmatter } = Astro.props;
 
-const { title, seoTitle, standfirst, date, description, ogImage } = frontmatter;
+const { title, seoTitle, standfirst, date, description, ogImage, channel, canonical, cover, coverAlt } = frontmatter;
+const covers = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', { eager: true });
+const coverImg = channel && cover ? covers[`../assets/${cover}`]?.default : null;
 
 const printed = new Date(date).toLocaleDateString('en-IN', {
   day: 'numeric', month: 'long', year: 'numeric'
@@ -15,13 +18,16 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
 const enc = encodeURIComponent;
 const slug = Astro.url.pathname.replace(/^\/+|\/+$/g, '');
 ---
-<BaseLayout title={`${seoTitle ?? title} — The Fine Print`} description={description ?? standfirst} image={ogImage} datePublished={date}>
+<BaseLayout title={`${seoTitle ?? title} — The Fine Print`} description={description ?? standfirst} image={ogImage} datePublished={date} canonicalUrl={canonical}>
   <article class="shell flow">
+    {channel && <p class="channel-kicker"><a href={`${import.meta.env.BASE_URL}proper-channel`}>{channel}</a></p>}
     <h1>{title}</h1>
     {standfirst && <p class="standfirst">{standfirst}</p>}
-    <p class="dateline">Achintyarup Ray · <time datetime={date}>{printed}</time><span data-gc-views hidden> · Read <b></b> times</span></p>
+    <p class="dateline">{channel ? `${channel} · ` : ''}Achintyarup Ray · <time datetime={date}>{printed}</time><span data-gc-views hidden> · Read <b></b> times</span></p>
+    {coverImg && <Image src={coverImg} alt={coverAlt ?? ''} widths={[400, 800, 1200]} class="channel-cover" />}
 
     <slot />
+    {canonical && <p class="channel-note">This story first appeared on <a href={canonical}>Proper Channel</a>, Achintyarup Ray's daily news channel built on public documents.</p>}
   </article>
 
 <Subscribe variant="foot" />
@@ -62,6 +68,10 @@ const slug = Astro.url.pathname.replace(/^\/+|\/+$/g, '');
 </script>
 
 <style>
+  .channel-kicker { margin: 0 0 0.4rem; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; }
+  .channel-kicker a { color: #c62828; text-decoration: none; font-weight: 700; }
+  .channel-cover { display: block; width: 100%; height: auto; margin-block: 1.5rem; }
+  .channel-note { font-size: 0.9rem; color: var(--ink-soft); border-top: 1px solid var(--rule); padding-top: 1rem; margin-top: 2.5rem; }
   .share {
     margin-block-start: 4rem;
     padding-block: 1.25rem;
