@@ -7,12 +7,6 @@ export const SECTIONS = [
     blurb: 'Long-form reporting built on archive files, RTI replies and official records — what the documents say, and what they leave out.',
   },
   {
-    slug: 'news',
-    name: 'News',
-    short: 'News',
-    blurb: 'Short, plain-language stories from public documents such as audit reports and parliamentary papers. Published daily as Proper Channel.',
-  },
-  {
     slug: 'history',
     name: 'History',
     short: 'History',

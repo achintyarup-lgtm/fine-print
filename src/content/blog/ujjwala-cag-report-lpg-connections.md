@@ -7,9 +7,7 @@ date: "2026-11-12"
 cover: ujjwala-cag-cover.jpg
 coverAlt: "Red LPG gas cylinder beside a two-burner stove in an Indian kitchen, with the headline: Ujjwala irregularity, CAG report, 5.5 lakh connections went to homes that already had gas (representative AI-generated image)"
 ogImage: og/ujjwala-og.jpg
-channel: "Proper Channel"
-canonical: "https://properchannelin.substack.com/p/ujjwala-cag-report-lpg-connections"
-section: "news"
+section: "investigations"
 draft: false
 ---
 

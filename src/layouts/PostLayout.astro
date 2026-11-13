@@ -29,7 +29,6 @@ const slug = Astro.url.pathname.replace(/^\/+|\/+$/g, '');
     {coverImg && <Image src={coverImg} alt={coverAlt ?? ''} widths={[400, 800, 1200]} class="channel-cover" />}
 
     <slot />
-    {canonical && <p class="channel-note">This story first appeared on <a href={canonical}>Proper Channel</a>, Achintyarup Ray's daily news channel built on public documents.</p>}
   </article>
 
 <Subscribe variant="foot" />

@@ -6,7 +6,7 @@ import { SECTIONS } from '../data/sections.js';
 import { getStories } from '../lib/posts.js';
 
 const stories = await getStories();
-const lead = stories.find((p) => p.data.section === 'news') ?? stories[0];
+const lead = stories.find((p) => p.data.section === 'investigations') ?? stories[0];
 const inv = stories.filter((p) => p !== lead).slice(0, 3);
 const onTop = new Set([lead, ...inv]);
 const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p) => p.data.section === s.slug).length]));
@@ -14,8 +14,8 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
 <BaseLayout>
   <div class="page">
     <section class="lead-row" aria-label="Top stories">
-      <div class="lead-row__main" data-section="news">
-        <h2 class="rubric"><a href={`${import.meta.env.BASE_URL}news/`}>News <span>· Proper Channel</span></a></h2>
+      <div class="lead-row__main" data-section="investigations">
+        <h2 class="rubric"><a href={`${import.meta.env.BASE_URL}investigations/`}>Fine Print Investigations</a></h2>
         <StoryCard post={lead} variant="lead" showSection={false} />
         <a class="sec__all lead-row__all" href={`${import.meta.env.BASE_URL}investigations/`} data-section="investigations">All investigations →</a>
       </div>
@@ -27,7 +27,6 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
 
 
     {SECTIONS.filter((s) => s.slug === 'investigations').map((s) => {
-      if (s.slug === 'news') return null;
       const list = stories.filter((p) => p.data.section === s.slug && !onTop.has(p)).slice(0, s.slug === 'investigations' ? 6 : 3);
       return list.length > 0 && (
         <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
@@ -58,7 +57,6 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
     </section>
 
     {SECTIONS.filter((s) => s.slug !== 'investigations').map((s) => {
-      if (s.slug === 'news') return null;
       const list = stories.filter((p) => p.data.section === s.slug && !onTop.has(p)).slice(0, s.slug === 'investigations' ? 6 : 3);
       return list.length > 0 && (
         <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>

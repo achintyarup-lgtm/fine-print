@@ -4,8 +4,7 @@ standfirst: "Washington links the Alappuzha firm to a Chandigarh couple it accus
 description: "The US Treasury has sanctioned Viharaboating Private Limited of Alappuzha, Kerala, formed on 12 February 2026, over its link to Suniel Kumar Sharma and Jaspreet Preeti Shahid, accused of running fake ship registries for Iran’s tankers."
 seoTitle: "US sanctions Kerala company in Iran fake ship-flag case"
 date: "2026-11-13"
-section: "news"
-channel: "Proper Channel"
+section: "investigations"
 draft: true
 ---
 

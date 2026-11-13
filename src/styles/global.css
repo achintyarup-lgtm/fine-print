@@ -470,7 +470,7 @@ td:not(:first-child), th:not(:first-child) { text-align: right; }
   display: grid; gap: 1rem;
 }
 @media (min-width: 640px) { .picker__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1000px) { .picker__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .picker__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .picker__tile {
   height: 100%;
   display: flex; flex-direction: column; gap: 0.6rem;
