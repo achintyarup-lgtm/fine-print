@@ -504,3 +504,5 @@ td:not(:first-child), th:not(:first-child) { text-align: right; }
 .lead-row--solo { margin-bottom: 3rem; }
 .empty { color: var(--ink-soft); font-style: italic; padding-block: 2rem; }
 .page__subscribe { max-width: var(--measure); margin: 3rem auto 0; }
+
+.story--lead .story__media img { aspect-ratio: 16 / 9; }
