@@ -1,177 +1,78 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
+import StoryCard from '../components/StoryCard.astro';
 import Subscribe from '../components/Subscribe.astro';
+import { SECTIONS } from '../data/sections.js';
+import { getStories } from '../lib/posts.js';
 
-const covers = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', { eager: true });
-
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+const stories = await getStories();
+const lead = stories.find((p) => p.data.section === 'investigations') ?? stories[0];
+const news = stories.filter((p) => p.data.section === 'news').slice(0, 4);
+const onTop = new Set([lead, ...news]);
+const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p) => p.data.section === s.slug).length]));
 ---
 <BaseLayout>
-  <div class="shell">
-    <p class="lede">
-      Longer pieces on policy, environment, history and literature — the
-      arguments that need more room than a column allows, and the numbers
-      that go with them.
-    </p>
+  <div class="page">
+    <section class="lead-row" aria-label="Top stories">
+      <div class="lead-row__main">
+        <h2 class="rubric" data-section="investigations"><a href={`${import.meta.env.BASE_URL}investigations/`}>Fine Print Investigations</a></h2>
+        <StoryCard post={lead} variant="lead" showSection={false} />
+      </div>
+      <aside class="newsrail" data-section="news" aria-labelledby="news-h">
+        <h2 id="news-h" class="rubric"><a href={`${import.meta.env.BASE_URL}news/`}>News <span>· Proper Channel</span></a></h2>
+        {news.map((p, i) => <StoryCard post={p} variant={i === 0 ? 'card' : 'line'} showSection={false} />)}
+        <a class="sec__all" href={`${import.meta.env.BASE_URL}news/`}>All news →</a>
+      </aside>
+    </section>
 
-    <div class="ornament" aria-hidden="true"><span></span><span></span><span></span></div>
 
-    <ul class="postlist">
-      {posts.map((post) => {
-        const cover = post.data.cover ? covers[`../assets/${post.data.cover}`]?.default : null;
-        return (
+    {SECTIONS.filter((s) => s.slug === 'investigations').map((s) => {
+      if (s.slug === 'news') return null;
+      const list = stories.filter((p) => p.data.section === s.slug && !onTop.has(p)).slice(0, s.slug === 'investigations' ? 6 : 3);
+      return list.length > 0 && (
+        <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
+          <header class="sec__head">
+            <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from Fine Print Investigations' : s.name}</a></h2>
+            <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>
+          </header>
+          <div class="grid">
+            {list.map((p) => <StoryCard post={p} showSection={false} />)}
+          </div>
+        </section>
+      );
+    })}
+
+    <section class="picker" aria-labelledby="picker-h">
+      <h2 id="picker-h" class="rubric">Choose what to read</h2>
+      <ul class="picker__grid">
+        {SECTIONS.map((s) => (
           <li>
-            <time datetime={post.data.date}>
-              {new Date(post.data.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
-            </time>
-            {post.data.channel && <p class="kicker">{post.data.channel}</p>}
-            <h2><a href={`${import.meta.env.BASE_URL}${post.slug}`}>{post.data.title}</a></h2>
-            {post.data.standfirst && (
-              <p>
-                {post.data.standfirst}{' '}
-                <a class="more" href={`${import.meta.env.BASE_URL}${post.slug}`}>More…</a>
-              </p>
-            )}
-            {cover && (
-              <a href={`${import.meta.env.BASE_URL}${post.slug}`} class="postlist__cover">
-                <Image src={cover} alt="" widths={[400, 800, 1200]} loading="lazy" />
-              </a>
-            )}
+            <a class="picker__tile" href={`${import.meta.env.BASE_URL}${s.slug}/`} data-section={s.slug}>
+              <span class="picker__name">{s.name}</span>
+              <span class="picker__blurb">{s.blurb}</span>
+              <span class="picker__count">{counts[s.slug]} {counts[s.slug] === 1 ? 'story' : 'stories'} →</span>
+            </a>
           </li>
-        );
-      })}
-    </ul>
-    <Subscribe />
+        ))}
+      </ul>
+    </section>
+
+    {SECTIONS.filter((s) => s.slug !== 'investigations').map((s) => {
+      if (s.slug === 'news') return null;
+      const list = stories.filter((p) => p.data.section === s.slug && !onTop.has(p)).slice(0, s.slug === 'investigations' ? 6 : 3);
+      return list.length > 0 && (
+        <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
+          <header class="sec__head">
+            <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from Fine Print Investigations' : s.name}</a></h2>
+            <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>
+          </header>
+          <div class="grid">
+            {list.map((p) => <StoryCard post={p} showSection={false} />)}
+          </div>
+        </section>
+      );
+    })}
+
+    <div class="page__subscribe"><Subscribe /></div>
   </div>
 </BaseLayout>
-
-<style>
-  .lede {
-    font-size: 1.1875rem;
-    line-height: 1.55;
-    color: var(--ink-soft);
-    max-width: 32rem;
-    margin: 0;
-  }
-  .lede::first-letter {
-    font-family: var(--display);
-    font-size: 3.4em;
-    line-height: 0.8;
-    float: left;
-    margin: 0.05em 0.12em 0 0;
-    color: var(--ochre);
-  }
-
-  .ornament {
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-block: 3.5rem;
-  }
-  .ornament span {
-    width: 6px;
-    height: 6px;
-    transform: rotate(45deg);
-    background: var(--ochre);
-  }
-  .ornament span:nth-child(2) {
-    background: var(--ink);
-    opacity: 0.55;
-  }
-
-  .postlist p.kicker { margin: 0 0 0.4rem; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: #c62828; font-weight: 700; }
-  .postlist { list-style: none; margin: 0; padding: 0; }
-
-  .postlist li {
-    padding-block: 0 3.5rem;
-    border: 0;
-    position: relative;
-  }
-  .postlist li + li { padding-block-start: 3.5rem; }
-
-  .postlist li + li::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    border-top: 1px solid var(--rule);
-  }
-  .postlist li + li::after {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: 50%;
-    width: 7px;
-    height: 7px;
-    margin-left: -3.5px;
-    transform: rotate(45deg);
-    background: var(--paper);
-    border: 1px solid var(--rule);
-  }
-
-  .postlist time {
-    display: block;
-    font-size: 0.75rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--ochre);
-    margin-bottom: 0.6rem;
-  }
-
-  .postlist h2 {
-    border: 0;
-    border-bottom: 1px solid color-mix(in srgb, var(--ochre) 50%, transparent);
-    padding: 0 0 0.5rem;
-    margin: 0 0 0.85rem;
-    max-width: 32rem;
-    font-size: clamp(1.5rem, 1.25rem + 1.1vw, 1.875rem);
-    line-height: 1.15;
-    transition: border-color 0.25s ease;
-  }
-  .postlist h2 a { text-decoration: none; }
-  .postlist li:hover h2 { border-bottom-color: var(--ochre); }
-
-  .postlist p {
-    color: var(--ink-soft);
-    max-width: 32rem;
-    margin: 0;
-  }
-
-  .more {
-    white-space: nowrap;
-    color: var(--ochre);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-  }
-  .more:hover {
-    color: var(--ink);
-    text-decoration-color: var(--ochre);
-  }
-
-  .postlist__cover {
-    display: block;
-    margin-top: 1.75rem;
-    overflow: hidden;
-  }
-  .postlist__cover img {
-    display: block;
-    width: 100%;
-    height: auto;
-    filter: saturate(0.92);
-    transition: filter 0.5s ease, transform 0.5s ease;
-  }
-  .postlist__cover:hover img {
-    filter: saturate(1.05);
-    transform: scale(1.012);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .postlist__cover img { transition: none; }
-    .postlist__cover:hover img { transform: none; }
-  }
-</style>

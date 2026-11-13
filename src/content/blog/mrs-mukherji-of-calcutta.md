@@ -6,6 +6,7 @@ seoTitle: "Savitri Devi, Hitler’s Devotee: What India’s Secret File Shows"
 date: "2026-09-28"
 ogImage: og/mrs-mukherji-og-2.jpg
 cover: savitri-devi-cover.jpg
+section: "investigations"
 draft: false
 ---
 

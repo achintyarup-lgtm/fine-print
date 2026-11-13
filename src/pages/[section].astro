@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StoryCard from '../components/StoryCard.astro';
+import Subscribe from '../components/Subscribe.astro';
+import { SECTIONS, sectionBySlug } from '../data/sections.js';
+import { getStories } from '../lib/posts.js';
+
+export function getStaticPaths() {
+  return SECTIONS.map((s) => ({ params: { section: s.slug } }));
+}
+
+const s = sectionBySlug[Astro.params.section];
+const list = (await getStories()).filter((p) => p.data.section === s.slug);
+const [first, ...rest] = list;
+---
+<BaseLayout title={`${s.name} — The Fine Print`} description={s.blurb}>
+  <div class="page">
+    <header class="sechead" data-section={s.slug}>
+      <p class="sechead__label">Section</p>
+      <h1>{s.name}</h1>
+      <p class="sechead__blurb">{s.blurb}</p>
+      <nav class="chips" aria-label="Sections">
+        <a href={import.meta.env.BASE_URL}>All</a>
+        {SECTIONS.map((x) => (
+          <a href={`${import.meta.env.BASE_URL}${x.slug}/`} aria-current={x.slug === s.slug ? 'page' : undefined}>{x.short}</a>
+        ))}
+      </nav>
+    </header>
+
+    {first ? (
+      <>
+        <section class="lead-row lead-row--solo"><StoryCard post={first} variant="lead" showSection={false} /></section>
+        {rest.length > 0 && <div class="grid">{rest.map((p) => <StoryCard post={p} showSection={false} />)}</div>}
+      </>
+    ) : (
+      <p class="empty">The first stories in this section are on their way.</p>
+    )}
+    <div class="page__subscribe"><Subscribe /></div>
+  </div>
+</BaseLayout>

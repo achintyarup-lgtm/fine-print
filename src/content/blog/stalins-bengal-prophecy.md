@@ -6,6 +6,7 @@ seoTitle: "Stalin Predicted Bangladesh in 1951: What the Russian Archive Shows"
 date: "2026-11-05"
 ogImage: "og/stalin-bengal-og.jpg"
 cover: "stalin-bengal-cover.jpg"
+section: "investigations"
 draft: false
 ---
 

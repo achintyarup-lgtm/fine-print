@@ -1,0 +1,35 @@
+---
+/**
+ * One story teaser. variant: 'lead' (big, image beside text on wide screens),
+ * 'card' (image on top) or 'line' (text only, for lists).
+ */
+import { Image } from 'astro:assets';
+import { sectionBySlug } from '../data/sections.js';
+import { fmtDate } from '../lib/posts.js';
+
+const { post, variant = 'card', showSection = true } = Astro.props;
+const covers = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', { eager: true });
+const cover = post.data.cover ? covers[`../assets/${post.data.cover}`]?.default : null;
+const href = `${import.meta.env.BASE_URL}${post.slug}/`;
+const section = sectionBySlug[post.data.section];
+const kicker = post.data.channel ? `${section.short} · ${post.data.channel}` : section.short;
+const Heading = variant === 'lead' ? 'h2' : 'h3';
+---
+<article class={`story story--${variant}`} data-section={post.data.section}>
+  {cover && variant !== 'line' && (
+    <a href={href} class="story__media" tabindex="-1" aria-hidden="true">
+      <Image src={cover} alt="" widths={variant === 'lead' ? [600, 900, 1400] : [400, 700]}
+        sizes={variant === 'lead' ? '(min-width: 900px) 60vw, 100vw' : '(min-width: 900px) 30vw, 100vw'}
+        loading={variant === 'lead' ? 'eager' : 'lazy'} />
+    </a>
+  )}
+  <div class="story__body">
+    {showSection && <p class="story__kicker"><a href={`${import.meta.env.BASE_URL}${section.slug}/`}>{kicker}</a></p>}
+    <Heading class="story__title"><a href={href}>{post.data.title}</a></Heading>
+    {post.data.standfirst && variant !== 'line' && <p class="story__dek">{post.data.standfirst}</p>}
+    <p class="story__meta">
+      <time datetime={post.data.date}>{fmtDate(post.data.date)}</time>
+      {post.bn && <> · <a href={`${import.meta.env.BASE_URL}${post.bn}/`} lang="bn">বাংলাতেও পড়ুন</a></>}
+    </p>
+  </div>
+</article>

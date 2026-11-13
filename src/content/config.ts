@@ -11,6 +11,7 @@ const blog = defineCollection({
     cover: z.string().optional(),
     ogImage: z.string().optional(),
     draft: z.boolean().default(false),
+    section: z.enum(['investigations', 'news', 'history', 'essays']).default('investigations'),
     channel: z.string().optional(),
     canonical: z.string().optional(),
     coverAlt: z.string().optional(),

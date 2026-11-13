@@ -9,6 +9,7 @@ coverAlt: "Red LPG gas cylinder beside a two-burner stove in an Indian kitchen, 
 ogImage: og/ujjwala-og.jpg
 channel: "Proper Channel"
 canonical: "https://properchannelin.substack.com/p/ujjwala-cag-report-lpg-connections"
+section: "news"
 draft: false
 ---
 
