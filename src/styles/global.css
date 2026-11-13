@@ -506,3 +506,4 @@ td:not(:first-child), th:not(:first-child) { text-align: right; }
 .page__subscribe { max-width: var(--measure); margin: 3rem auto 0; }
 
 .story--lead .story__media img { aspect-ratio: 16 / 9; }
+.lead-row__all { display: inline-block; margin-top: 1.25rem; }
