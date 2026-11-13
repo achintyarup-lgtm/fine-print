@@ -32,7 +32,7 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
       return list.length > 0 && (
         <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
           <header class="sec__head">
-            <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from Fine Print Investigations' : s.name}</a></h2>
+            <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from The Fine Print' : s.name}</a></h2>
             <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>
           </header>
           <div class="grid">
@@ -63,7 +63,7 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
       return list.length > 0 && (
         <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
           <header class="sec__head">
-            <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from Fine Print Investigations' : s.name}</a></h2>
+            <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from The Fine Print' : s.name}</a></h2>
             <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>
           </header>
           <div class="grid">
