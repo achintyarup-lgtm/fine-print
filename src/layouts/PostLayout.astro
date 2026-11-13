@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
 const { title, seoTitle, standfirst, date, description, ogImage, channel, canonical, cover, coverAlt, section = 'investigations' } = frontmatter;
 const sec = sectionBySlug[section];
 const covers = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', { eager: true });
-const coverImg = channel && cover ? covers[`../assets/${cover}`]?.default : null;
+const coverImg = coverAlt && cover ? covers[`../assets/${cover}`]?.default : null;
 
 const printed = new Date(date).toLocaleDateString('en-IN', {
   day: 'numeric', month: 'long', year: 'numeric'

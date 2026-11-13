@@ -5,6 +5,9 @@ description: "The US Treasury has sanctioned Viharaboating Private Limited of Al
 seoTitle: "US sanctions Kerala company in Iran fake ship-flag case"
 date: "2026-11-14"
 section: "investigations"
+cover: kerala-sanctions-cover.jpg
+coverAlt: "Oil tanker at anchor on open sea flying a plain, unidentifiable flag, with the headline: Iran sanctions, Kerala company on US list, firm set up in February linked to fake ship flags network, says US (representative AI-generated image)"
+ogImage: og/kerala-sanctions-og.jpg
 draft: true
 ---
 
