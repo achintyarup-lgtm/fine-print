@@ -1,5 +1,5 @@
 ---
-title: "5.5 lakh Ujjwala gas connections went to homes that already had LPG connections, says CAG"
+title: "Meant for the poor, 5.5 lakh Ujjwala gas connections went to homes that already had LPG: CAG"
 standfirst: "The government’s auditor estimates a burden of ₹326.61 crore on public money. The oil companies say they decided to close the old connections."
 description: "CAG Report No. 11 of 2026 finds 5,50,446 Ujjwala (PMUY) connections went to homes that already had LPG, a ₹326.61 crore burden on public money."
 seoTitle: "CAG: 5.5 lakh Ujjwala LPG connections to homes that had gas"
