@@ -15,12 +15,12 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
   <div class="page">
     <section class="lead-row" aria-label="Top stories">
       <div class="lead-row__main" data-section="investigations">
-        <h2 class="rubric"><a href={`${import.meta.env.BASE_URL}investigations/`}>Fine Print Investigations</a></h2>
+        <h2 class="rubric">The Long Read</h2>
         <StoryCard post={lead} variant="lead" showSection={false} />
         <a class="sec__all lead-row__all" href={`${import.meta.env.BASE_URL}investigations/`} data-section="investigations">All investigations →</a>
       </div>
       <aside class="newsrail" aria-labelledby="inv-h">
-        <h2 id="inv-h" class="rubric">Other stories</h2>
+        <h2 id="inv-h" class="rubric"><a href={`${import.meta.env.BASE_URL}investigations/`}>Fine Print Investigations</a></h2>
         {inv.map((p, i) => <StoryCard post={p} variant={i === 0 ? 'card' : 'line'} />)}
       </aside>
     </section>
