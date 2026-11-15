@@ -1,5 +1,5 @@
 ---
-title: "US puts a Kerala company set up in February on its Iran sanctions list"
+title: "US blacklists Kerala firm linked to ‘fake ship flags’ that helped Iran’s oil tankers hide, it says"
 standfirst: "Washington links the Alappuzha firm to a Chandigarh couple it accuses of selling fake ship flags to tankers carrying Iranian oil. The husband was already on Europe’s sanctions list."
 description: "The US Treasury has sanctioned Viharaboating Private Limited of Alappuzha, Kerala, formed on 12 February 2026, over its link to Suniel Kumar Sharma and Jaspreet Preeti Shahid, accused of running fake ship registries for Iran’s tankers."
 seoTitle: "US sanctions Kerala company in Iran fake ship-flag case"
