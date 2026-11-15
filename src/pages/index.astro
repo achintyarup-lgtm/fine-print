@@ -6,7 +6,7 @@ import { SECTIONS } from '../data/sections.js';
 import { getStories } from '../lib/posts.js';
 
 const stories = await getStories();
-const lead = stories.find((p) => p.data.section === 'investigations') ?? stories[0];
+const lead = stories.find((p) => p.data.longread) ?? stories[0];
 const inv = stories.filter((p) => p !== lead).slice(0, 3);
 const onTop = new Set([lead, ...inv]);
 const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p) => p.data.section === s.slug).length]));

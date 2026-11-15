@@ -8,7 +8,7 @@ section: "investigations"
 cover: kerala-sanctions-cover.jpg
 coverAlt: "Oil tanker at anchor on calm open sea under a clear sky, flying a plain, unidentifiable flag (representative AI-generated image)"
 ogImage: og/kerala-sanctions-og.jpg
-draft: true
+draft: false
 ---
 
 A private company registered in Kerala’s Alappuzha district in **February this year** has been put on the **United States’ Iran sanctions list**.
