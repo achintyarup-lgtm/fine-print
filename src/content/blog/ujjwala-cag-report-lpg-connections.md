@@ -5,7 +5,7 @@ description: "CAG Report No. 11 of 2026 finds 5,50,446 Ujjwala (PMUY) connection
 seoTitle: "CAG: 5.5 lakh Ujjwala LPG connections to homes that had gas"
 date: "2026-11-12"
 cover: ujjwala-cag-cover.jpg
-coverAlt: "Red LPG gas cylinder beside a two-burner stove in an Indian kitchen, with the headline: Ujjwala irregularity, CAG report, 5.5 lakh connections went to homes that already had gas (representative AI-generated image)"
+coverAlt: "Red LPG gas cylinder connected to a two-burner stove on a kitchen counter in an Indian home (representative AI-generated image)"
 ogImage: og/ujjwala-og.jpg
 section: "investigations"
 draft: false
