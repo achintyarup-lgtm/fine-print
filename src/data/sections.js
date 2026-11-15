@@ -1,22 +1,16 @@
-// The site's sections. Order here is the order on the home page and in the menu.
+// The site's sections. Order here is the order in the menu and on the home page.
 export const SECTIONS = [
   {
     slug: 'investigations',
     name: 'Fine Print Investigations',
     short: 'Investigations',
-    blurb: 'Long-form reporting built on archive files, RTI replies and official records — what the documents say, and what they leave out.',
+    blurb: 'Fresh reporting from official records — audit reports, sanctions lists, company filings — in plain language, with every figure traced to the document.',
   },
   {
-    slug: 'history',
-    name: 'History',
-    short: 'History',
-    blurb: 'Old stories, retold from the record: legends tested against the files that should settle them.',
-  },
-  {
-    slug: 'essays',
-    name: 'Essays & Features',
-    short: 'Essays',
-    blurb: 'Places, people and vanished trades — reported writing with more room to breathe.',
+    slug: 'long-read',
+    name: 'The Long Read',
+    short: 'Long Read',
+    blurb: 'Long-form stories from archives, old files and manuscripts: what the documents say, and what they leave out.',
   },
 ];
 

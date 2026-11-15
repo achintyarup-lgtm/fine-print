@@ -7,7 +7,7 @@ date: "2026-11-05"
 ogImage: "og/stalin-bengal-og.jpg"
 cover: "stalin-bengal-cover.jpg"
 longread: true
-section: "investigations"
+section: "long-read"
 draft: false
 ---
 

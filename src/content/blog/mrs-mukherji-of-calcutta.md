@@ -7,7 +7,7 @@ date: "2026-09-28"
 ogImage: og/mrs-mukherji-og-2.jpg
 cover: savitri-devi-cover.jpg
 longread: true
-section: "investigations"
+section: "long-read"
 draft: false
 ---
 

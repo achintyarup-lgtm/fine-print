@@ -509,6 +509,7 @@ td:not(:first-child), th:not(:first-child) { text-align: right; }
 .lead-row__all { display: inline-block; margin-top: 1.25rem; }
 
 .morelink {
+  white-space: nowrap;
   display: inline-block;
   font-family: var(--sans);
   font-size: 0.75rem;
@@ -523,3 +524,5 @@ td:not(:first-child), th:not(:first-child) { text-align: right; }
 .story--lead .story__dek { display: block; -webkit-line-clamp: unset; overflow: visible; }
 .story__more { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(--alta); white-space: nowrap; text-decoration: none; }
 .story__more:hover { text-decoration: underline; }
+[data-section="long-read"] { --sec: var(--alta); }
+@media (min-width: 1000px) { .picker__grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

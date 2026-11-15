@@ -6,50 +6,47 @@ import { SECTIONS } from '../data/sections.js';
 import { getStories } from '../lib/posts.js';
 
 const stories = await getStories();
-const lead = stories.find((p) => p.data.longread) ?? stories[0];
-const inv = stories.filter((p) => p !== lead).slice(0, 3);
-const onTop = new Set([lead, ...inv]);
+const longreads = stories.filter((p) => p.data.section === 'long-read');
+const investigations = stories.filter((p) => p.data.section === 'investigations');
+const lead = longreads[0] ?? stories[0];
+const rail = investigations.slice(0, 3);
+const more = longreads.filter((p) => p !== lead).slice(0, 6);
 const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p) => p.data.section === s.slug).length]));
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout>
   <div class="page">
     <section class="lead-row" aria-label="Top stories">
-      <div class="lead-row__main" data-section="investigations">
-        <h2 class="rubric">The Long Read</h2>
+      <div class="lead-row__main" data-section="long-read">
+        <h2 class="rubric"><a href={`${base}long-read/`}>The Long Read</a></h2>
         <StoryCard post={lead} variant="lead" showSection={false} />
-        <a class="morelink lead-row__all" href={`${import.meta.env.BASE_URL}stories/`}>Other stories</a>
+        <a class="morelink lead-row__all" href={`${base}stories/`}>Other stories</a>
       </div>
-      <aside class="newsrail" aria-labelledby="inv-h">
-        <h2 id="inv-h" class="rubric"><a href={`${import.meta.env.BASE_URL}investigations/`}>Fine Print Investigations</a></h2>
-        {inv.map((p, i) => <StoryCard post={p} variant={i === 0 ? 'card' : 'line'} />)}
-        <a class="morelink" href={`${import.meta.env.BASE_URL}investigations/`}>All investigations</a>
+      <aside class="newsrail" data-section="investigations" aria-labelledby="inv-h">
+        <h2 id="inv-h" class="rubric"><a href={`${base}investigations/`}>Fine Print Investigations</a></h2>
+        {rail.map((p) => <StoryCard post={p} showSection={false} />)}
+        <a class="morelink" href={`${base}investigations/`}>All investigations</a>
       </aside>
     </section>
 
-
-    {SECTIONS.filter((s) => s.slug === 'investigations').map((s) => {
-      const list = stories.filter((p) => p.data.section === s.slug && !onTop.has(p)).slice(0, s.slug === 'investigations' ? 6 : 3);
-      return list.length > 0 && (
-        <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
-          <header class="sec__head">
-            <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from The Fine Print' : s.name}</a></h2>
-            {s.slug === 'investigations'
-              ? <a class="morelink" href={`${import.meta.env.BASE_URL}stories/`}>All stories</a>
-              : <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>}
-          </header>
-          <div class="grid">
-            {list.map((p) => <StoryCard post={p} showSection={false} />)}
-          </div>
-        </section>
-      );
-    })}
+    {more.length > 0 && (
+      <section class="sec" data-section="long-read" aria-labelledby="sec-more">
+        <header class="sec__head">
+          <h2 id="sec-more"><a href={`${base}long-read/`}>More from The Fine Print</a></h2>
+          <a class="morelink" href={`${base}stories/`}>All stories</a>
+        </header>
+        <div class="grid">
+          {more.map((p) => <StoryCard post={p} showSection={false} />)}
+        </div>
+      </section>
+    )}
 
     <section class="picker" aria-labelledby="picker-h">
       <h2 id="picker-h" class="rubric">Choose what to read</h2>
-      <ul class="picker__grid">
+      <ul class="picker__grid picker__grid--two">
         {SECTIONS.map((s) => (
           <li>
-            <a class="picker__tile" href={`${import.meta.env.BASE_URL}${s.slug}/`} data-section={s.slug}>
+            <a class="picker__tile" href={`${base}${s.slug}/`} data-section={s.slug}>
               <span class="picker__name">{s.name}</span>
               <span class="picker__blurb">{s.blurb}</span>
               <span class="picker__count">{counts[s.slug]} {counts[s.slug] === 1 ? 'story' : 'stories'} →</span>
@@ -58,23 +55,6 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
         ))}
       </ul>
     </section>
-
-    {SECTIONS.filter((s) => s.slug !== 'investigations').map((s) => {
-      const list = stories.filter((p) => p.data.section === s.slug && !onTop.has(p)).slice(0, s.slug === 'investigations' ? 6 : 3);
-      return list.length > 0 && (
-        <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
-          <header class="sec__head">
-            <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from The Fine Print' : s.name}</a></h2>
-            {s.slug === 'investigations'
-              ? <a class="morelink" href={`${import.meta.env.BASE_URL}stories/`}>All stories</a>
-              : <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>}
-          </header>
-          <div class="grid">
-            {list.map((p) => <StoryCard post={p} showSection={false} />)}
-          </div>
-        </section>
-      );
-    })}
 
     <div class="page__subscribe"><Subscribe /></div>
   </div>

@@ -7,7 +7,7 @@ import { sectionBySlug } from '../data/sections.js';
 
 const { frontmatter } = Astro.props;
 
-const { title, seoTitle, standfirst, date, description, ogImage, channel, canonical, cover, coverAlt, section = 'investigations' } = frontmatter;
+const { title, seoTitle, standfirst, date, description, ogImage, channel, canonical, cover, coverAlt, section = 'long-read' } = frontmatter;
 const sec = sectionBySlug[section];
 const covers = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', { eager: true });
 const coverImg = coverAlt && cover ? covers[`../assets/${cover}`]?.default : null;
