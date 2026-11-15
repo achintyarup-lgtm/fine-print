@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StoryCard from '../components/StoryCard.astro';
+import Subscribe from '../components/Subscribe.astro';
+import { SECTIONS } from '../data/sections.js';
+import { getStories } from '../lib/posts.js';
+const stories = await getStories();
+---
+<BaseLayout title="All stories — The Fine Print" description="Every story published on The Fine Print, newest first.">
+  <div class="page">
+    <header class="sechead">
+      <p class="sechead__label">Archive</p>
+      <h1>All stories</h1>
+      <p class="sechead__blurb">Every story on The Fine Print, newest first.</p>
+      <nav class="chips" aria-label="Sections">
+        <a href={`${import.meta.env.BASE_URL}stories/`} aria-current="page">All</a>
+        {SECTIONS.map((x) => <a href={`${import.meta.env.BASE_URL}${x.slug}/`}>{x.short}</a>)}
+      </nav>
+    </header>
+    <div class="grid">{stories.map((p) => <StoryCard post={p} />)}</div>
+    <div class="page__subscribe"><Subscribe /></div>
+  </div>
+</BaseLayout>

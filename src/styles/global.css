@@ -507,3 +507,19 @@ td:not(:first-child), th:not(:first-child) { text-align: right; }
 
 .story--lead .story__media img { aspect-ratio: 16 / 9; }
 .lead-row__all { display: inline-block; margin-top: 1.25rem; }
+
+.morelink {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--alta);
+  text-decoration: none;
+}
+.morelink:hover { text-decoration: underline; }
+.newsrail .morelink { margin-top: 0.25rem; }
+.story--lead .story__dek { display: block; -webkit-line-clamp: unset; overflow: visible; }
+.story__more { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(--alta); white-space: nowrap; text-decoration: none; }
+.story__more:hover { text-decoration: underline; }

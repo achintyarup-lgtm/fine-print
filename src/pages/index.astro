@@ -17,11 +17,12 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
       <div class="lead-row__main" data-section="investigations">
         <h2 class="rubric">The Long Read</h2>
         <StoryCard post={lead} variant="lead" showSection={false} />
-        <a class="sec__all lead-row__all" href={`${import.meta.env.BASE_URL}investigations/`} data-section="investigations">All investigations →</a>
+        <a class="morelink lead-row__all" href={`${import.meta.env.BASE_URL}stories/`}>Other stories</a>
       </div>
       <aside class="newsrail" aria-labelledby="inv-h">
         <h2 id="inv-h" class="rubric"><a href={`${import.meta.env.BASE_URL}investigations/`}>Fine Print Investigations</a></h2>
         {inv.map((p, i) => <StoryCard post={p} variant={i === 0 ? 'card' : 'line'} />)}
+        <a class="morelink" href={`${import.meta.env.BASE_URL}investigations/`}>All investigations</a>
       </aside>
     </section>
 
@@ -32,7 +33,9 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
         <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
           <header class="sec__head">
             <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from The Fine Print' : s.name}</a></h2>
-            <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>
+            {s.slug === 'investigations'
+              ? <a class="morelink" href={`${import.meta.env.BASE_URL}stories/`}>All stories</a>
+              : <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>}
           </header>
           <div class="grid">
             {list.map((p) => <StoryCard post={p} showSection={false} />)}
@@ -62,7 +65,9 @@ const counts = Object.fromEntries(SECTIONS.map((s) => [s.slug, stories.filter((p
         <section class="sec" data-section={s.slug} aria-labelledby={`sec-${s.slug}`}>
           <header class="sec__head">
             <h2 id={`sec-${s.slug}`}><a href={`${import.meta.env.BASE_URL}${s.slug}/`}>{s.slug === 'investigations' ? 'More from The Fine Print' : s.name}</a></h2>
-            <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>
+            {s.slug === 'investigations'
+              ? <a class="morelink" href={`${import.meta.env.BASE_URL}stories/`}>All stories</a>
+              : <a class="sec__all" href={`${import.meta.env.BASE_URL}${s.slug}/`}>All {s.short.toLowerCase()} →</a>}
           </header>
           <div class="grid">
             {list.map((p) => <StoryCard post={p} showSection={false} />)}
