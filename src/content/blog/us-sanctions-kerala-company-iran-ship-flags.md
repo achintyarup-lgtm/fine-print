@@ -79,6 +79,6 @@ Any property the listed people and companies hold within US reach is **frozen**.
 - What business does Viharaboating actually carry on in Alappuzha?
 - Have Indian authorities, including the Ministry of Corporate Affairs and the Directorate General of Shipping, taken any step after the EU and US actions?
 
-*This report is based on official records published by the US Treasury and the Council of the European Union, and on the company’s record with India’s Ministry of Corporate Affairs. The Fine Print emailed Viharaboating Private Limited at the address in its company records on 13 November 2026, asking for its response. Any reply will be added to this story.*
+*This report is based on official records published by the US Treasury and the Council of the European Union, and on the company’s record with India’s Ministry of Corporate Affairs. The Fine Print emailed Viharaboating Private Limited at the address in its company records on 13 November 2026, asking for its response. No reply had been received by the time of publication. Any reply will be added to this story.*
 
 **Sources:** [US Treasury press release, 4 November 2026](https://home.treasury.gov/news/press-releases/sb0681) · [OFAC list entries, 4 November 2026](https://ofac.treasury.gov/recent-actions/20261104) · [Federal Register notice, 9 November 2026](https://www.federalregister.gov/documents/2026/11/09/2026-22766/notice-of-ofac-sanctions-action) · [EU Implementing Regulation 2026/1843, 23 July 2026](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AL_202601843)
