@@ -3,7 +3,7 @@ title: "US puts a Kerala company set up in February on its Iran sanctions list"
 standfirst: "Washington links the Alappuzha firm to a Chandigarh couple it accuses of selling fake ship flags to tankers carrying Iranian oil. The husband was already on Europe’s sanctions list."
 description: "The US Treasury has sanctioned Viharaboating Private Limited of Alappuzha, Kerala, formed on 12 February 2026, over its link to Suniel Kumar Sharma and Jaspreet Preeti Shahid, accused of running fake ship registries for Iran’s tankers."
 seoTitle: "US sanctions Kerala company in Iran fake ship-flag case"
-date: "2026-11-14"
+date: "2026-11-15"
 section: "investigations"
 cover: kerala-sanctions-cover.jpg
 coverAlt: "Oil tanker at anchor on calm open sea under a clear sky, flying a plain, unidentifiable flag (representative AI-generated image)"
@@ -54,13 +54,15 @@ The company was registered **five months before** the EU action, not after it.
 
 ## What does the Kerala company do?
 
-**The US records do not say.** Company-register data lists its main business as **accommodation**, the category used for hotels and lodging, not shipping. Its name suggests boating; Alappuzha is known for its houseboats.
+**The US records do not say.** India’s company register, kept by the Ministry of Corporate Affairs, gives some clues. The company’s registration number carries the official industry code for **hotels and accommodation**, not shipping. It is classed as a **“small company”**, with a paid-up capital of **₹1 lakh**. It has not yet filed any accounts. Its name suggests boating; Alappuzha is known for its houseboats.
 
 ## Who runs it?
 
-Company-register data shows **two directors**, both appointed on **12 February 2026**, the day the company was formed. One is listed as **Jaspreet**, with the director identification number **03563403**. That is **the same number the US Treasury gives for Jaspreet Preeti Shahid** in its sanctions entry. The other director is a private individual whom the US has not named.
+The Ministry of Corporate Affairs record lists **Jaspreet Preeti Shahid** by her full name as a **director and promoter** of the company, appointed on **12 February 2026**, the day it was formed. Her director identification number there, **03563403**, is **the same number the US Treasury gives for her** in its sanctions entry.
 
-So the link between the Kerala company and Shahid rests not only on the US government’s word. India’s own company records list her as a director from the first day.
+The company has one other director and promoter, appointed the same day. The US has not named that person.
+
+So the link between the Kerala company and Shahid rests not only on the US government’s word. India’s own company records list her as a founder.
 
 ## What about Europe?
 
@@ -77,6 +79,6 @@ Any property the listed people and companies hold within US reach is **frozen**.
 - What business does Viharaboating actually carry on in Alappuzha?
 - Have Indian authorities, including the Ministry of Corporate Affairs and the Directorate General of Shipping, taken any step after the EU and US actions?
 
-*This report is based on official records published by the US Treasury and the Council of the European Union, and on the company’s public registration record. The Fine Print emailed Viharaboating Private Limited at the address in its company records on 13 November 2026, asking for its response. Any reply will be added to this story.*
+*This report is based on official records published by the US Treasury and the Council of the European Union, and on the company’s record with India’s Ministry of Corporate Affairs. The Fine Print emailed Viharaboating Private Limited at the address in its company records on 13 November 2026, asking for its response. Any reply will be added to this story.*
 
 **Sources:** [US Treasury press release, 4 November 2026](https://home.treasury.gov/news/press-releases/sb0681) · [OFAC list entries, 4 November 2026](https://ofac.treasury.gov/recent-actions/20261104) · [Federal Register notice, 9 November 2026](https://www.federalregister.gov/documents/2026/11/09/2026-22766/notice-of-ofac-sanctions-action) · [EU Implementing Regulation 2026/1843, 23 July 2026](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AL_202601843)
