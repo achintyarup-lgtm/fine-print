@@ -1,7 +1,7 @@
 ---
 title: "US blacklists Kerala firm linked to ‘fake ship flags’ that helped Iran’s oil tankers hide, it says"
 standfirst: "Washington links the Alappuzha firm to a Chandigarh couple it accuses of selling fake ship flags to tankers carrying Iranian oil. The husband was already on Europe’s sanctions list."
-description: "The US Treasury has sanctioned Viharaboating Private Limited of Alappuzha, Kerala, formed on 12 February 2026, over its link to Suniel Kumar Sharma and Jaspreet Preeti Shahid, accused of running fake ship registries for Iran’s tankers."
+description: "The US Treasury has sanctioned Viharaboating Private Limited of Alappuzha, Kerala, formed on 12 February 2026, over its link to a Chandigarh couple accused of running fake ship registries for Iran’s tankers."
 seoTitle: "US sanctions Kerala company in Iran fake ship-flag case"
 date: "2026-11-15"
 section: "investigations"
@@ -13,11 +13,11 @@ draft: false
 
 A private company registered in Kerala’s Alappuzha district in **February this year** has been put on the **United States’ Iran sanctions list**.
 
-The US Treasury has listed the company, **Viharaboating Private Limited**, as owned or controlled by a Chandigarh woman, **Jaspreet Preeti Shahid**, or as acting on her behalf. It says she and her husband, **Suniel Kumar Sharma**, ran a network that sold **fake ship registrations** to tankers carrying Iranian oil.
+The US Treasury has listed the company, **Viharaboating Private Limited**, as owned or controlled by **a Chandigarh woman**, or as acting on her behalf. It says she and **her husband** ran a network that sold **fake ship registrations** to tankers carrying Iranian oil.
 
-The Treasury does not accuse the Kerala company itself of selling fake flags. It is on the list because of its link to Shahid.
+The Treasury does not accuse the Kerala company itself of selling fake flags. It is on the list because of its link to the woman.
 
-Sharma was already under **European Union sanctions**, imposed in July, over ship registration services that the EU linked to the transport of Russian oil. The details, and what the records do and do not say, are below.
+The husband was already under **European Union sanctions**, imposed in July, over ship registration services that the EU linked to the transport of Russian oil. The details, and what the records do and do not say, are below.
 
 ## What is a ship’s flag?
 
@@ -25,7 +25,7 @@ Every ship must be registered in a country, and it flies that country’s flag. 
 
 ## What did the US do?
 
-On **4 November 2026**, the US Treasury put Sharma, Shahid and **nine organisations** linked to them on its Iran sanctions list. Eight are in India and one is in Singapore.
+On **4 November 2026**, the US Treasury put the couple and **nine organisations** linked to them on its Iran sanctions list. Eight are in India and one is in Singapore.
 
 All the other Indian names on the list are in **Chandigarh or Mohali**. Viharaboating is the only one in Kerala. Its address on the US list is **Pallippuram, Cherthala, Alappuzha**.
 
@@ -36,7 +36,7 @@ According to the Treasury:
 - **Fake registries:** the network bought web addresses and set up websites and offices that posed as the official ship registries of countries that had never authorised them. The Treasury names **Guyana, Eswatini, Laos, Aruba, Nicaragua, Mali, Mozambique, Malawi, Sint Maarten and Timor-Leste**, among others.
 - **Iran’s tankers:** tankers carrying Iranian oil used these false flags to hide from sanctions, the Treasury says.
 - **A seized tanker:** one tanker flying a false Guyana flag, the **Majestic X**, was seized by the US on **22 April 2026** while carrying Iranian oil.
-- **Shahid’s role:** the Treasury says she “stepped in to manage — at least on paper” the couple’s businesses.
+- **The wife’s role:** the Treasury says she “stepped in to manage — at least on paper” the couple’s businesses.
 
 **These are allegations by the US government. No court has ruled on them.**
 
@@ -47,8 +47,8 @@ The US list gives Viharaboating’s date of establishment as **12 February 2026*
 The dates run like this:
 
 1. **12 February 2026:** Viharaboating Private Limited is registered in Kerala.
-2. **23 July 2026:** the EU sanctions Sharma over ship registries linked to Russian oil.
-3. **4 November 2026:** the US sanctions Sharma, Shahid and nine organisations, including Viharaboating, over Iranian oil.
+2. **23 July 2026:** the EU sanctions the husband over ship registries linked to Russian oil.
+3. **4 November 2026:** the US sanctions the couple and nine organisations, including Viharaboating, over Iranian oil.
 
 The company was registered **five months before** the EU action, not after it.
 
@@ -58,17 +58,17 @@ The company was registered **five months before** the EU action, not after it.
 
 ## Who runs it?
 
-The Ministry of Corporate Affairs record lists **Jaspreet Preeti Shahid** by her full name as a **director and promoter** of the company, appointed on **12 February 2026**, the day it was formed. Her director identification number there, **03563403**, is **the same number the US Treasury gives for her** in its sanctions entry.
+The Ministry of Corporate Affairs record lists **the same woman** as a **director and promoter** of the company, appointed on **12 February 2026**, the day it was formed. Her director identification number there is **the same number the US Treasury gives for her** in its sanctions entry.
 
 The company has one other director and promoter, appointed the same day. The US has not named that person.
 
-So the link between the Kerala company and Shahid rests not only on the US government’s word. India’s own company records list her as a founder.
+So the link between the Kerala company and the woman rests not only on the US government’s word. India’s own company records list her as a founder.
 
 ## What about Europe?
 
-The EU added Sharma to its Russia sanctions list on **23 July 2026**, in its 21st package. The EU describes him as managing director of Oceaniek International and a businessperson who sets up ship registries in various countries. It says several governments have rejected his involvement and reported fraudulent ship registrations.
+The EU added the husband to its Russia sanctions list on **23 July 2026**, in its 21st package. The EU describes him as the managing director of a ship-registry company and a businessperson who sets up ship registries in various countries. It says several governments have rejected his involvement and reported fraudulent ship registrations.
 
-The EU list names Sharma only. **Shahid and the nine organisations named by the US do not appear on it.**
+The EU list names the husband only. **The wife and the nine organisations named by the US do not appear on it.**
 
 ## What do the sanctions mean?
 
